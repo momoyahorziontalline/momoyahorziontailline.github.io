@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 2000px;
+}
+
+.bg-img {
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-image: url('/img/wild-flowers-571940_1920.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#main.fixed {
+    padding-top: 120px;
+}
+
+.navbar1 {
+    padding: 10px 0;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.navbar1.fixed {
+    position: fixed;
+    top: 0;
+}
+
+nav.navbar1 .logo {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-items1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #7C64AA;
+}
+
+.nav-items1 a {
+    color: #7C64AA;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.nav-items1 a:hover {
+    color: #7C64AA;
+    color: black;
+}
+
+.container1 {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 手機板 */
+nav .mobile_nav_toggle1 {
+    display: none;
+    width: 100%;
+}
+
+nav .mobile_logo1 {
+    height: 100px;
+    margin: 6px 0 0 30px;
+}
+
+nav .mobile_nav_toggle1 i {
+    border: #7C64AA solid 1px;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 10px 15px 10px 15px;
+    font-size: 30px;
+    color: #7C64AA;
+}
+
+nav .mobile_navbar1 {
+    display: none;
+    background-color:#BDB1D4;
+    padding: 10px;
+}
+
+nav .mobile_navbar1.show {
+    display: block;
+}
+
+nav .mobile_navbar1 ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+}
+
+nav .mobile_navbar1 li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+nav .mobile_navbar1 li a:hover {
+    display: block;
+    background-color: white;
+    color: black;
+}
+
+/* 有flaot，但要需要清除clear */
+.clearfix {
+    clear: both;
+}
+
+@media screen and (max-width:1200px) {
+
+}
+/* 手機板 */
+@media screen and (max-width:500px) {
+
+    nav .mobile_nav_toggle1 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav .nav-items1 {
+        display: none;
+    }
+
+}
