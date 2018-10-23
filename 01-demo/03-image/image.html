@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            font-family: cwTeXFangSong;
+            /* cwTeXFangSong（仿宋體）、cwTeXHei（黑體）、cwTeXMing（明體）、cwTeXYen（圓體）和cwTeXKai（楷體） */
+        }
+
+        .grid {
+            position: relative;
+        }
+
+        .item1 {
+            display: block;
+            position: absolute;
+            width: 32.2%;
+            height: 400px;
+            margin: 5px;
+            z-index: 1;
+            text-align: center;
+            line-height: 150px;
+            background-image: url("./img/bonsai-3647754_1920.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .item2 {
+            display: block;
+            position: absolute;
+            width: 32.2%;
+            height: 200px;
+            margin: 5px;
+            z-index: 1;
+            text-align: center;
+            line-height: 150px;
+            background-image: url("./img/fat-plants-3369055_1920.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .item3 {
+            display: block;
+            position: absolute;
+            width: 32.2%;
+            height: 400px;
+            margin: 5px;
+            z-index: 1;
+            text-align: center;
+            line-height: 150px;
+            background-image: url("./img/201610192228110.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .item4 {
+            display: block;
+            position: absolute;
+            width: 32.2%;
+            height: 400px;
+            margin: 5px;
+            z-index: 1;
+            text-align: center;
+            line-height: 150px;
+            background-image: url("./img/201702021819510.JPG");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .item5 {
+            display: block;
+            position: absolute;
+            width: 32.2%;
+            height: 200px;
+            margin: 5px;
+            z-index: 1;
+            text-align: center;
+            line-height: 150px;
+            background-image: url("./img/201704040951130.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .item6 {
+            display: block;
+            position: absolute;
+            width: 32.2%;
+            height: 200px;
+            margin: 5px;
+            z-index: 1;
+            text-align: center;
+            line-height: 150px;
+            background-image: url("./img/DisplayCut.jpg");
+            background-size: cover;
+            background-position: top;
+        }
+
+        .item.muuri-item-dragging {
+            z-index: 3;
+        }
+
+        .item.muuri-item-releasing {
+            z-index: 2;
+        }
+
+        .item.muuri-item-hidden {
+            z-index: 0;
+        }
+
+        .item-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        /* 標題 */
+        .titile_1 {
+            text-align: center;
+            padding: 50px 0;
+            color: rgb(125, 100, 170);
+            font-size: 24px;
+        }
+
+        .box {
+            width: 120px;
+            height: 5px;
+            background-color: rgb(125, 100, 170);
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        /* 手機版 */
+        #section_image_moblie {
+            display: none;
+        }
+
+       .photo{
+           padding: 10px 10px;
+       }
+
+        @media screen and (max-width: 768px) {
+            #section_image {
+                display: none;
+            }
+
+            #section_image_moblie {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="section_image">
+        <div class="titile_1">
+            花藝精選
+            <div class="box"></div>
+        </div>
+        <div class="grid">
+            <div class="item1">
+                <div class="item-content">
+                </div>
+            </div>
+
+            <div class="item2">
+                <div class="item-content">
+                </div>
+            </div>
+
+            <div class="item3">
+                <div class="item-content">
+                </div>
+            </div>
+
+            <div class="item4">
+                <div class="item-content">
+
+                </div>
+            </div>
+
+            <div class="item5">
+                <div class="item-content">
+                </div>
+            </div>
+
+            <div class="item6">
+                <div class="item-content">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section_image_moblie">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="titile_1">
+                        花藝精選
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="col-12 photo">
+                    <img width="100%" src="./img/bonsai-3647754_1920.jpg" alt="tree">
+                </div>
+                <div class="col-12 photo">
+                    <img width="100%" src="./img/fat-plants-3369055_1920.jpg" alt="tree">
+                </div>
+                <div class="col-12 photo">
+                    <img width="100%" src="./img/201610192228110.jpg" alt="tree">
+                </div>
+                <div class="col-12 photo">
+                    <img width="100%" src="./img/201704040951130.jpg" alt="tree">
+                </div>
+                <div class="col-12 photo">
+                    <img width="100%" src="./img/201702021819510.JPG" alt="tree">
+                </div>
+                <div class="col-12 photo">
+                    <img width="100%" src="./img/DisplayCut.jpg" alt="tree">
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/web-animations-js@2.3.1/web-animations.min.js"></script>
+    <script src="https://unpkg.com/hammerjs@2.0.8/hammer.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"></script>
+    <script>
+        const grid = new Muuri('.grid',
+            {
+                dragEnabled: true, //拖拉移動
+                dragAxis: 'xy'
+            });
+    </script>
+</body>
+
+</html>

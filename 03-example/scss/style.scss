@@ -1,0 +1,131 @@
+/*set array and offset for flower petals*/
+#flower1 path {
+    stroke-dasharray: 165;
+    stroke-dashoffset: 165;
+  }
+  
+  #flower2 path {
+    stroke-dasharray: 210;
+    stroke-dashoffset: 210;
+  }
+  
+  #flower3 path {
+    stroke-dasharray: 180;
+    stroke-dashoffset: 180;
+  }
+  
+  #flower4 path {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+  }
+  
+  #flower5 path {
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+  }
+  
+  #flower6 path {
+    stroke-dasharray: 235;
+    stroke-dashoffset: 235;
+  }
+  
+  /*two sets of loops for flower petals (based on number of petals) to add animation and delay*/
+  #flower1, #flower2, #flower5 {
+    @for $i from 1 through 12 {
+      path:nth-of-type(#{$i}) {
+        animation: draw 2s ease-in forwards;
+        animation-delay: .02s * $i;
+      }
+    }
+  }
+  
+  #flower3, #flower4, #flower6 {
+    @for $i from 1 through 9 {
+      path:nth-of-type(#{$i}) {
+        animation: draw 2s ease-in forwards;
+        animation-delay: .02s * $i;
+      }
+    }
+  }
+  
+  /*set array and offset for flower stems*/
+  #stem1 {
+    stroke-dasharray: 341;
+    stroke-dashoffset: -341;
+  }
+  
+  #stem2--top {
+    stroke-dasharray: 87;
+    stroke-dashoffset: 87;
+  }
+  
+  #stem2--bottom {
+    stroke-dasharray: 298;
+    stroke-dashoffset: 298;
+  }
+  
+  #stem3--top{
+    stroke-dasharray: 90;
+    stroke-dashoffset: 90;
+  }
+  
+  #stem3--bottom{
+    stroke-dasharray: 253;
+    stroke-dashoffset: 253;
+  }
+  
+  #stem4--top {
+    stroke-dasharray: 181;
+    stroke-dashoffset: 181;
+  }
+  
+  #stem4--bottom {
+    stroke-dasharray: 161;
+    stroke-dashoffset: 161;
+  }
+  
+  #stem5--top {
+    stroke-dasharray: 34;
+    stroke-dashoffset: 34;
+  }
+  
+  #stem5--bottom {
+    stroke-dasharray: 186;
+    stroke-dashoffset: 186;
+  }
+  
+  #stem6 {
+    stroke-dasharray: 270;
+    stroke-dashoffset: 270;
+  }
+  
+  /*set animations for flower stems*/
+  #stem1, #stem6 {
+    animation: draw .75s ease-in forwards;
+    animation-delay: 1.25s;
+  }
+  
+  #stem2--bottom, #stem3--bottom, #stem4--bottom, #stem5--bottom {
+    animation: draw .5s ease-in forwards;
+    animation-delay: 1.5s;
+  }
+  
+  #stem2--top, #stem3--top, #stem4--top, #stem5--top {
+    animation: draw .5s ease-in forwards;
+    animation-delay: 1.25s;
+  }
+  
+  /*animation keyframe for flower petals & stems*/
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  /*default styles for svg as a whole*/
+  svg {
+    display: block; /*so margin auto will work*/
+    margin: 2rem auto 0 auto;
+    width: 20rem;
+  }
+  

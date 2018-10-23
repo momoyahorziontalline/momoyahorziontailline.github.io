@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            font-family: cwTeXFangSong;
+            /* cwTeXFangSong（仿宋體）、cwTeXHei（黑體）、cwTeXMing（明體）、cwTeXYen（圓體）和cwTeXKai（楷體） */
+        }
+
+        #section_story {
+            background-image: url("./img/flower_story-01.png");
+            /* background-color: black; */
+            width: 100%;
+            height: 470px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 標題 */
+        .titile_1 {
+            text-align: center;
+            padding: 50px 0;
+            color: rgb(125, 100, 170);
+            font-size: 24px;
+        }
+
+        .box {
+            width: 120px;
+            height: 5px;
+            background-color: rgb(125, 100, 170);
+            margin: auto;
+            margin-top: 10px;
+            opacity: 1;
+        }
+
+        #section_story p {
+            text-align: center;
+            color: rgb(125, 100, 170);
+            font-size: 16px;
+
+        }
+        
+        /* 按鈕 */
+        @-webkit-keyframes sheen {
+            0% {
+                -webkit-transform: skewY(-45deg) translateX(0);
+                transform: skewY(-45deg) translateX(0);
+            }
+
+            100% {
+                -webkit-transform: skewY(-45deg) translateX(12.5em);
+                transform: skewY(-45deg) translateX(12.5em);
+            }
+        }
+
+        @keyframes sheen {
+            0% {
+                -webkit-transform: skewY(-45deg) translateX(0);
+                transform: skewY(-45deg) translateX(0);
+            }
+
+            100% {
+                -webkit-transform: skewY(-45deg) translateX(12.5em);
+                transform: skewY(-45deg) translateX(12.5em);
+            }
+        }
+
+        .wrapper {
+            display: block;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .button {
+            padding: 0.3em 1.5em;
+            text-align: center;
+            text-decoration: none;
+            color: #7d64aa;
+            border: 2px solid #7d64aa;
+            font-size: 20px;
+            display: inline-block;
+            border-radius: 50px;
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .button:before {
+            content: "";
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 100%;
+            width: 3em;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -4.5em;
+            -webkit-transform: skewX(-45deg) translateX(0);
+            transform: skewX(-45deg) translateX(0);
+            -webkit-transition: none;
+            transition: none;
+        }
+
+        .button:hover {
+            background-color: #7d64aa;
+            color: #fff;
+            border-bottom: 4px solid #644e8d;
+            text-decoration: none;
+        }
+
+        .button:hover:before {
+            -webkit-transform: skewX(-45deg) translateX(13.5em);
+            transform: skewX(-45deg) translateX(13.5em);
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="section_story">
+        <div class="container">
+            <div class="titile_1">
+                築立花念
+                <div class="box"></div>
+            </div>
+            <p>花與樹皆取材於大自然而花草樹木依偎相生，正如家人、朋友、伴侶間的緊密情誼，</p>
+            <p>花設樹所秉持相互扶持的精神而創立，希望能與大家一同分享大自然的恩惠與純粹。</p>
+            <br>
+            <p>「花設樹」取自於化學式「花色素」的諧音，是一種水溶性的植物色素，為植物之葉</p>
+            <p> 、花、果實及根莖常見之成分，多為具鮮艷之顏色〈黃色除外〉。</p>
+            <br><br>
+            <div class="wrapper">
+                <a href="#" class="button">查看菜單</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+
+    <!-- Demo JS -->
+    <script src=""></script>
+
+</body>
+
+</html>
