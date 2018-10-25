@@ -303,7 +303,7 @@ body {
 /* 標題 */
 .titile_1 {
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0;
     color: rgb(125, 100, 170);
     font-size: 24px;
 }
@@ -346,9 +346,10 @@ body {
 }
 
 /* 標題 */
-.titile_1 {
+.titile_2 {
     text-align: center;
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 50px;
     color: rgb(125, 100, 170);
     font-size: 24px;
 }
