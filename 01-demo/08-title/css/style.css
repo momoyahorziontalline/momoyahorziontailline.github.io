@@ -279,92 +279,6 @@ body {
     background-position: top;
 }
 
-/* 手機板 */
-/* .item_moblie1 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/bonsai-3647754_1920.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.item_moblie2 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/fat-plants-3369055_1920.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.item_moblie3 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/201610192228110.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.item_moblie4 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/201702021819510.JPG");
-    background-size: cover;
-    background-position: center;
-}
-
-.item_moblie5 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/201704040951130.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.item_moblie6 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/DisplayCut.jpg");
-    background-size: cover;
-    background-position: top;
-} */
-
-
 .item.muuri-item-dragging {
     z-index: 3;
 }
@@ -402,10 +316,24 @@ body {
     margin-top: 10px;
 }
 
-@media screen and (max-width: 809px) {
-   
+/* 手機版 */
+#section_image_moblie {
+    display: none;
 }
 
+.photo{
+   padding: 10px 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #section_image {
+        display: none;
+    }
+
+    #section_image_moblie {
+        display: block;
+    }
+}
 
 /* story */
 #section_story {
