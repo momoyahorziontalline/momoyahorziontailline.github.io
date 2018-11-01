@@ -1,6 +1,6 @@
 /* navbar */
 * {
-    font-family: cwTeXFangSong;
+    font-family: cwTeXYen;
     /* cwTeXFangSong（仿宋體）、cwTeXHei（黑體）、cwTeXMing（明體）、cwTeXYen（圓體）和cwTeXKai（楷體） */
 }
 
@@ -81,8 +81,8 @@ body {
 }
 
 .swiper-container {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 50%;
 }
 
 .swiper-slide {
@@ -279,92 +279,6 @@ body {
     background-position: top;
 }
 
-/* 手機板 */
-/* .item_moblie1 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/bonsai-3647754_1920.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.item_moblie2 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/fat-plants-3369055_1920.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.item_moblie3 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/201610192228110.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.item_moblie4 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/201702021819510.JPG");
-    background-size: cover;
-    background-position: center;
-}
-
-.item_moblie5 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/201704040951130.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.item_moblie6 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    margin: 5px;
-    z-index: 1;
-    text-align: center;
-    line-height: 150px;
-    background-image: url("./img/DisplayCut.jpg");
-    background-size: cover;
-    background-position: top;
-} */
-
-
 .item.muuri-item-dragging {
     z-index: 3;
 }
@@ -389,7 +303,7 @@ body {
 /* 標題 */
 .titile_1 {
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0;
     color: rgb(125, 100, 170);
     font-size: 24px;
 }
@@ -402,25 +316,40 @@ body {
     margin-top: 10px;
 }
 
-@media screen and (max-width: 809px) {
-   
+/* 手機版 */
+#section_image_moblie {
+    display: none;
 }
 
+.photo{
+   padding: 10px 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #section_image {
+        display: none;
+    }
+
+    #section_image_moblie {
+        display: block;
+    }
+}
 
 /* story */
 #section_story {
     background-image: url("./img/flower_story-01.png");
     /* background-color: black; */
     width: 100%;
-    height: 470px;
+    height: 600px;
     background-size: cover;
     background-position: center;
 }
 
 /* 標題 */
-.titile_1 {
+.titile_2 {
     text-align: center;
-    padding: 50px 0;
+    padding-top: 100px;
+    padding-bottom: 50px;
     color: rgb(125, 100, 170);
     font-size: 24px;
 }
@@ -521,62 +450,110 @@ body {
 
 /* activity */
 
-.container2 {
-    display: flex;
-}
+        .container2 {
+            display: flex;
+        }
 
-.section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    transition: flex .4s ease;
-    position: relative;
-    height: 500px;
-    
-}
+        .section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            transition: flex .4s ease;
+            position: relative;
+            height: 500px;
 
-.section .overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: background-color .8s ease;
-}
+        }
 
-.section .content {
-    z-index: 2;
-}
+        .section .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: background-color .8s ease;
+        }
 
-.section:hover {
-    flex: 2;
-}
+        .section .content {
+            z-index: 2;
+        }
 
-.section:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.95);
-}
+        .section:hover {
+            flex: 2;
+        }
 
-#weddingDesign {
-    background-image: url("./img/04-01.jpg");
-}
+        .section:hover .overlay {
+            background-color: rgba(0, 0, 0, 0.95);
+        }
 
-#restaurantEvent {
-    background-image: url("./img/04-02.png");
-}
+        #weddingDesign {
+            background-image: url("./img/04-01.jpg");
+        }
 
-#DIYhandMade {
-    background-image: url("./img/04-03.jpg");
-}
+        #restaurantEvent {
+            background-image: url("./img/04-02.png");
+        }
 
-#courtyardLandscaping {
-    background-image: url("./img/04-04.jpg");
-}
+        #DIYhandMade {
+            background-image: url("./img/04-03.jpg");
+        }
 
+        #courtyardLandscaping {
+            background-image: url("./img/04-04.jpg");
+        }
+
+        #section_activity_moblie {
+            display: none;
+        }
+
+        .section_moblie {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            transition: flex .4s ease;
+            position: relative;
+            height: 100px;
+
+        }
+
+        .section_moblie .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: background-color .8s ease;
+        }
+
+        .section_moblie .content {
+            z-index: 2;
+        }
+
+        .section_moblie:hover {
+            flex: 2;
+        }
+
+        .section_moblie:hover .overlay {
+            background-color: rgba(0, 0, 0, 0.95);
+        }
+
+        @media screen and (max-width: 500px) {
+            #section_activity {
+                display: none;
+            }
+
+            #section_activity_moblie {
+                display: block;
+            }
+        }
 
 /* table */
  /* 電腦版 */
@@ -610,55 +587,7 @@ body {
     padding: 20px 20px;
 }
 
- /* iPad pro */
- @media screen and (max-width: 1024px) {
-    #section_table {
-        display: none;
-    }
 
-    #section_table_moblie {
-        display: block;
-    }
-
-    .icon_moblie {
-        text-align: center;
-        padding: 20px 350px;
-    }
-
-}
- /* iPad */
- @media screen and (max-width: 768px) {
-    #section_table {
-        display: none;
-    }
-
-    #section_table_moblie {
-        display: block;
-    }
-
-    .icon_moblie {
-        text-align: center;
-        padding: 20px 200px;
-    }
-
-}
-
-/* iphone 6/7PLUS */
-@media screen and (max-width: 450px) {
-    #section_table {
-        display: none;
-    }
-
-    #section_table_moblie {
-        display: block;
-    }
-
-    .icon_moblie {
-        text-align: center;
-        padding: 20px 25px;
-    }
-
-}
 
 /* iphone X */
 @media screen and (max-width: 375px) {
@@ -672,26 +601,11 @@ body {
 
     .icon_moblie {
         text-align: center;
-        padding: 20px 20px;
+        padding: 8px;
     }
 
 }
 
-/* iphone 5/5E */
-@media screen and (max-width: 320px) {
-    #section_table {
-        display: none;
-    }
-
-    #section_table_moblie {
-        display: block;
-    }
-
-    .icon_moblie {
-        text-align: center;
-        padding: 20px 0px;
-    }
-}
 
 /* footer */
 
