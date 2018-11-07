@@ -1,0 +1,43 @@
+$Bg:#000;
+$iconcolor:rgba(150, 178, 195,1);
+$iconcolor1:rgba(150, 178, 195,0.5);
+
+#footer{
+    background-color: $Bg;
+    // height: 400px;
+    width: 100%;
+}
+
+.card_1{
+    color: white;
+    flex-direction: column;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.card_2{
+    text-align: center;
+    font-size: 12px;
+}
+
+#footer .container{
+    margin-top: 45px;  
+}
+
+.hr1{
+    height:1px;
+    border:none;
+    border-top:1px solid #555555;
+    width: 50px;
+}
+
+/* top */
+#BackToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    color: $iconcolor;
+    &:hover{
+        color: $iconcolor1;
+    }
+}
