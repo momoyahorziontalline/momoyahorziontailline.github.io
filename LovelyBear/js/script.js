@@ -18,25 +18,6 @@ $('.navbarTrigger').click(function () {
 //******************
 //*  javascript
 //******************
-swiper
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 2,
-  spaceBetween: 30,
-  slidesPerGroup: 2,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  breakpoints: {
-    576: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    }
-  }
-});
-
 // scrollToTop
 function scrollToTop(scrollDuration) {
   const scrollHeight = window.scrollY,

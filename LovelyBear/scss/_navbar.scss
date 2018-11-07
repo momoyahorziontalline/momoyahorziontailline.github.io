@@ -51,9 +51,7 @@
 }
 
  /* 滑樹滑動的效果 */
- #navbar_1{
-    /* 功能列寬度和陰影 */
-    .fixed {
+ #navbar_1.fixed {
         height: 100px;
         transform: 0.10s;
         -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
@@ -69,7 +67,7 @@
             font-size: 0.8rem;
         }
     }
- }
+
 
  @media screen and (max-width:992px) {
     #navbar_1 {
