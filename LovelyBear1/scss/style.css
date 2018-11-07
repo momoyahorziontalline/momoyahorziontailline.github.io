@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -16,8 +17,27 @@ html, body {
   font-family: Helvetica, "微軟正黑體", sans-serif;
 }
 
-.logo {
-  font-size: 50px;
+/* 先隱藏手機板 */
+#navbar_mobile_1 {
+  display: none;
+}
+
+/* 設定電腦的navbar寬度大小 */
+#navbar_1 {
+  width: 100%;
+  height: 120px;
+  background-color: white;
+  position: fixed;
+  /* 釘在最上方 */
+  z-index: 99;
+  /* logo區塊大小 */
+  /* logo尺大小 */
+  /* 功能列 */
+  /* 區塊大小 */
+}
+
+#navbar_1 .logo {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,16 +46,362 @@ html, body {
           justify-content: center;
 }
 
-.text-center {
-  margin: auto;
-}
-
-.small {
-  font-size: 14px;
-}
-
-.logo_icon {
+#navbar_1 .image {
+  width: 300px;
   height: 80px;
+}
+
+#navbar_1 .main_list {
+  width: 100%;
+  /* 文字區塊放置和大小 */
+}
+
+#navbar_1 .main_list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  /* 文字區塊間距 */
+}
+
+#navbar_1 .main_list ul li {
+  padding-right: 2rem;
+  /* 文字大小顏色 */
+}
+
+#navbar_1 .main_list ul li a {
+  text-decoration: none;
+  color: black;
+  line-height: 50px;
+  font-size: 1.2rem;
+}
+
+#navbar_1 .main_list ul li a:hover {
+  color: #00E676;
+}
+
+/* 滑樹滑動的效果 */
+#navbar_1 {
+  /* 功能列寬度和陰影 */
+}
+
+#navbar_1 .fixed {
+  height: 100px;
+  -webkit-transform: 0.10s;
+          transform: 0.10s;
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  /* 功能列logo尺寸大小 */
+  /* 功能列字型大小 */
+}
+
+#navbar_1 .fixed .image {
+  width: 200px;
+  height: 50px;
+}
+
+#navbar_1 .fixed .main_list ul li a {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 992px) {
+  #navbar_1 {
+    display: none;
+  }
+  /* 重疊問題class="a"和class="b" */
+  .a {
+    display: none;
+  }
+  .b {
+    width: 100%;
+    height: 50px;
+  }
+  .navbarTrigger {
+    display: block;
+  }
+  #navbar_mobile_1 {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    /* 釘在最上方 */
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 200;
+    -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    /* 平板與手機logo尺寸大小 */
+    /* 隱藏功能列 因為要換下拉式選單 */
+  }
+  #navbar_mobile_1 .container {
+    margin: 0;
+  }
+  #navbar_mobile_1 .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #navbar_mobile_1 .image {
+    width: 200px;
+    height: 50px;
+  }
+  #navbar_mobile_1 .main_list {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    /* 下拉選單顏色大小 */
+  }
+  #navbar_mobile_1 .main_list ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    list-style: none;
+  }
+  #navbar_mobile_1 .main_list ul li {
+    width: 100%;
+    text-align: center;
+  }
+  #navbar_mobile_1 .main_list ul li a {
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    line-height: 65px;
+  }
+  #navbar_mobile_1 .main_list ul li a:hover {
+    color: #00E676;
+  }
+  #navbar_mobile_1 .show_list {
+    height: auto;
+    display: none;
+  }
+  #navbar_mobile_1 .media_button {
+    display: block;
+  }
+}
+
+/* Animation */
+.navbarTrigger {
+  cursor: pointer;
+  width: 30px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+
+.navbarTrigger i {
+  background-color: #000;
+  border-radius: 2px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+
+.navbarTrigger i:nth-child(1) {
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navbarTrigger i:nth-child(2) {
+  margin: 5px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navbarTrigger i:nth-child(3) {
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navbarTrigger.active i:nth-child(1) {
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
+}
+
+.navbarTrigger.active i:nth-child(2) {
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
+}
+
+.navbarTrigger.active i:nth-child(3) {
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes inM {
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes outM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes outM {
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes inT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes inT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+            transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+            transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes outT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+            transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+            transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes inBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes inBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+            transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+            transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes outBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+            transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+            transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+/* 重疊問題class="a"和class="b" */
+.a {
+  width: 100%;
+  height: 100px;
 }
 
 .title {
@@ -53,7 +419,7 @@ hr {
 }
 
 #section_1 {
-  padding: 50px;
+  padding-top: 100px;
 }
 
 #section_1 img {
@@ -61,12 +427,16 @@ hr {
   padding-top: 20px;
 }
 
+#section_2 {
+  padding-top: 100px;
+}
+
 .mix {
   width: 100%;
 }
 
 #section_3 {
-  padding: 30px;
+  padding-top: 100px;
 }
 
 #section_3 img {

@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Lovely Bear</title>
+    <title>Lovely Bear | 可愛熊</title>
     <!-- <meta nlame="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
@@ -413,7 +412,7 @@
         /* 重疊問題class="a"和class="b" */
         .a {
             width: 100%;
-            height: 150px;
+            height: 100px;
         }
 
         /* home */
@@ -435,13 +434,12 @@
             </div>
             <div id="mainList" class="main_list">
                 <ul class="navbarlinks">
-                    <li><a href="#banner">NEW ARRIVAL</a></li>
-                    <li><a href="#section_1">SALE</a></li>
-                    <li><a href="#section_2">TOP</a></li>
-                    <li><a href="#section_3">DRESS</a></li>
-                    <li><a href="#section_3">OUTER</a></li>
-                    <li><a href="#section_4">ACC</a></li>
-                    <li><a href="">Sign Up</a></li>
+                    <li><a href="#banner">NEW 熊熊</a></li>
+                    <li><a href="#section_1">熊優惠區</a></li>
+                    <li><a href="#section_2">熊熊櫥窗</a></li>
+                    <li><a href="#section_3">熊熊品項</a></li>
+                    <!-- <li><a href="#section_4">ACC</a></li> -->
+                    <li><a href="">熊員請進</a></li>
                 </ul>
             </div>
         </div>
@@ -455,13 +453,12 @@
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                    <li><a href="#banner">NEW ARRIVAL</a></li>
-                    <li><a href="#section_1">SALE</a></li>
-                    <li><a href="#section_2">TOP</a></li>
-                    <li><a href="#section_3">DRESS</a></li>
-                    <li><a href="#section_3">OUTER</a></li>
-                    <li><a href="#section_4">ACC</a></li>
-                    <li><a href="">Sign Up</a></li>
+                    <li><a href="#banner">NEW 熊熊</a></li>
+                    <li><a href="#section_1">熊優惠區</a></li>
+                    <li><a href="#section_2">熊熊櫥窗</a></li>
+                    <li><a href="#section_3">熊熊品項</a></li>
+                    <!-- <li><a href="#section_4">ACC</a></li> -->
+                    <li><a href="">熊員請進</a></li>
                 </ul>
             </div>
             <span class="navbarTrigger">
@@ -513,7 +510,7 @@
     </div>
 
     <div id="section_1">
-        <h1 class="title">-Special Price-</h1>
+        <h1 class="title">-熊優惠區-</h1>
         <!-- 水平線 -->
         <hr>
         <div class="container">
@@ -544,7 +541,7 @@
     </div>
 
     <div id="section_3">
-        <h1 class="title">-Item-</h1>
+        <h1 class="title">-熊熊品項-</h1>
         <!-- 水平線 -->
         <hr>
         <div class="container-fluid">
@@ -600,6 +597,7 @@
             </div>
         </div>
     </div>
+
     <div id="section_4">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -656,54 +654,15 @@
     <!-- Swiper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
 
+    <!-- Demo JS -->
+    <script src="./js/special.js"></script>
+
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Demo JS -->
     <script src="./js/script.js"></script>
-    <script>
-     
-        // section_navbar 滾動效果
-        var intViewportHeight = window.innerHeight;
-        var navFixHeight = intViewportHeight - 5;
 
-        window.onscroll = function () { myFunction() };
-
-        function myFunction() {
-            if (document.body.scrollTop > navFixHeight || document.documentElement.scrollTop > navFixHeight) {
-                /*當卷軸滾動超過50px時，執行以下程式*/
-                document.querySelector("#navbar_1").classList.add('fixed');
-            } else {
-                document.querySelector("#navbar_1").classList.remove('fixed');
-            }
-        }
-
-        //平板版和手機版下拉選
-
-        // var navbarTrigger = document.querySelector(".navbarTrigger");
-
-        // navbarTrigger.onclick = function(){
-        //     navbarTrigger.classList.toggle('active');
-        //     console.log("Clicked menu");
-        //     document.querySelector("#mainListDiv").classList.toggle("show_list");
-        //     document.querySelector("#mainListDiv").fadeIn();
-
-        // }
-
-        $('.navbarTrigger').click(function () {
-            $(this).toggleClass('active');
-            console.log("Clicked menu");
-            $("#mainListDiv").toggleClass("show_list");
-            $("#mainListDiv").fadeIn();
-
-        });
-
-        //收合
-        $('.main_list ul li a').click(function () {
-            /* always close responsive nav after click */
-            $('.navbarTrigger:visible').click();
-        });
-    </script>
 </body>
 
 </html>

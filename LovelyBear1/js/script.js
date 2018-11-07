@@ -1,10 +1,24 @@
-//banner
-$('.carousel').carousel({
-  interval: 2000
+//******************
+//*     jquery
+//******************
+$('.navbarTrigger').click(function () {
+  $(this).toggleClass('active');
+  console.log("Clicked menu");
+  $("#mainListDiv").toggleClass("show_list");
+  $("#mainListDiv").fadeIn();
+
 });
 
+ //收合
+ $('.main_list ul li a').click(function () {
+  /* always close responsive nav after click */
+  $('.navbarTrigger:visible').click();
+});
 
-// swiper
+//******************
+//*  javascript
+//******************
+swiper
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 2,
   spaceBetween: 30,
@@ -22,7 +36,6 @@ var swiper = new Swiper('.swiper-container', {
     }
   }
 });
-
 
 // scrollToTop
 function scrollToTop(scrollDuration) {
@@ -47,9 +60,6 @@ function scrollToTop(scrollDuration) {
   console.log('Y軸高度  scrollHeight:' + scrollHeight);
   console.log('圓周率(3.14159) / (1000 / 15)  scrollStep:' + scrollStep);
   console.log('Y軸高除於2  cosParameter:' + cosParameter);
-  // console.log('計算次數:' + scrollCount);
-  // console.log(scrollMargin);
-  // console.log(scrollHeight);
-  // console.log(scrollHeight);
 }
+
 
