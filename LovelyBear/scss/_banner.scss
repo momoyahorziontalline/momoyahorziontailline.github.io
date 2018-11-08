@@ -1,0 +1,14 @@
+#banner_mobile{
+    display: none;
+}
+
+@media screen and (max-width:$lg) {
+    #banner{
+        display: none;
+    }
+    #banner_mobile{
+        display: block;
+    }
+}
+
+

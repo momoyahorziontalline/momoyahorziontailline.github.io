@@ -17,6 +17,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        // padding-left: 50px;
     }
      /* logo尺大小 */
     .image {
@@ -69,7 +70,7 @@
     }
 
 
- @media screen and (max-width:992px) {
+ @media screen and (max-width:$lg) {
     #navbar_1 {
         display: none;
     }
@@ -113,6 +114,7 @@
         .image {
             width: 200px;
             height: 50px;
+            padding-left: 10px;
         }
         /* 隱藏功能列 因為要換下拉式選單 */
         .main_list {
@@ -170,7 +172,7 @@
     border-radius: 2px;
     content: '';
     display: block;
-    width: 100%;
+    width: 50%;
     height: 4px;
 }
 
@@ -321,7 +323,7 @@
     }
 }
 
-@keyframes inBtm {
+keyframes inBtm {
     0% {
         transform: translateY(0px) rotate(0deg);
     }
