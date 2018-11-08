@@ -17,6 +17,7 @@ var swiper = new Swiper('.swiper-container', {
         576: {
             slidesPerView: 1,
             spaceBetween: 10,
+            slidesPerGroup: 1,
         }
     },
 });
