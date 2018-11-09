@@ -9,8 +9,8 @@ $('.navbarTrigger').click(function () {
 
 });
 
- //收合
- $('.main_list ul li a').click(function () {
+//收合
+$('.main_list ul li a').click(function () {
   /* always close responsive nav after click */
   $('.navbarTrigger:visible').click();
 });
@@ -55,27 +55,69 @@ var tab_content4 = document.querySelector('#tab_content4');
 
 
 btn1.onclick = function () {
-    tab_content1.classList.add("show");
-    tab_content2.classList.remove("show");
-    tab_content3.classList.remove("show");
-    tab_content4.classList.remove("show");
+  tab_content1.classList.add("show");
+  tab_content2.classList.remove("show");
+  tab_content3.classList.remove("show");
+  tab_content4.classList.remove("show");
 }
 btn2.onclick = function () {
-    tab_content1.classList.remove("show");
-    tab_content2.classList.add("show");
-    tab_content3.classList.remove("show");
-    tab_content4.classList.remove("show");
+  tab_content1.classList.remove("show");
+  tab_content2.classList.add("show");
+  tab_content3.classList.remove("show");
+  tab_content4.classList.remove("show");
 }
 btn3.onclick = function () {
-    tab_content1.classList.remove("show");
-    tab_content2.classList.remove("show");
-    tab_content3.classList.add("show");
-    tab_content4.classList.remove("show");
+  tab_content1.classList.remove("show");
+  tab_content2.classList.remove("show");
+  tab_content3.classList.add("show");
+  tab_content4.classList.remove("show");
 }
 btn4.onclick = function () {
-    tab_content1.classList.remove("show");
-    tab_content2.classList.remove("show");
-    tab_content3.classList.remove("show");
-    tab_content4.classList.add("show");
+  tab_content1.classList.remove("show");
+  tab_content2.classList.remove("show");
+  tab_content3.classList.remove("show");
+  tab_content4.classList.add("show");
 }
+
+// 跑馬燈marquee
+$(function () {
+
+  var $marqueeUl = $('div#marquee ul'),
+    $marqueeli = $marqueeUl.append($marqueeUl.html()).children(),
+    _height = $('div#marquee').height() * -1,
+    scrollSpeed = 600,
+    timer,
+    speed = 3000 + scrollSpeed;
+
+
+  $marqueeli.hover(function () {
+    clearTimeout(timer);
+  }, function () {
+    timer = setTimeout(showad, speed);
+  });
+
+
+  function showad() {
+    var _now = $marqueeUl.position().top / _height;
+    _now = (_now + 1) % $marqueeli.length;
+
+    // $marqueeUl 移動
+    $marqueeUl.animate({
+      top: _now * _height
+    }, scrollSpeed, function () {
+
+      if (_now == $marqueeli.length / 2) {
+        $marqueeUl.css('top', 0);
+      }
+    });
+
+    timer = setTimeout(showad, speed);
+  }
+
+  timer = setTimeout(showad, speed);
+
+  $('a').focus(function () {
+    this.blur();
+  });
+});
 
