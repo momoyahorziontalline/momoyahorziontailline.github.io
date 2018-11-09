@@ -1,0 +1,627 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.clear_fix {
+  clear: both;
+}
+
+html, body {
+  font-family: Helvetica, "微軟正黑體", sans-serif;
+}
+
+/* 先隱藏手機板 */
+#navbar_mobile_1 {
+  display: none;
+}
+
+/* 設定電腦的navbar寬度大小 */
+#navbar_1 {
+  width: 100%;
+  height: 120px;
+  background-color: white;
+  position: fixed;
+  /* 釘在最上方 */
+  z-index: 99;
+  /* logo區塊大小 */
+  /* logo尺大小 */
+  /* 功能列 */
+  /* 區塊大小 */
+}
+
+#navbar_1 .logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#navbar_1 .image {
+  width: 300px;
+  height: 80px;
+}
+
+#navbar_1 .main_list {
+  width: 100%;
+  /* 文字區塊放置和大小 */
+}
+
+#navbar_1 .main_list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  /* 文字區塊間距 */
+}
+
+#navbar_1 .main_list ul li {
+  padding-right: 2rem;
+  /* 文字大小顏色 */
+}
+
+#navbar_1 .main_list ul li a {
+  text-decoration: none;
+  color: black;
+  line-height: 50px;
+  font-size: 1.2rem;
+}
+
+#navbar_1 .main_list ul li a:hover {
+  color: #00E676;
+}
+
+/* 滑樹滑動的效果 */
+#navbar_1.fixed {
+  height: 100px;
+  -webkit-transform: 0.10s;
+          transform: 0.10s;
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  /* 功能列logo尺寸大小 */
+  /* 功能列字型大小 */
+}
+
+#navbar_1.fixed .image {
+  width: 200px;
+  height: 50px;
+}
+
+#navbar_1.fixed .main_list ul li a {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 992px) {
+  #navbar_1 {
+    display: none;
+  }
+  /* 重疊問題class="a"和class="b" */
+  .a {
+    display: none;
+  }
+  .b {
+    width: 100%;
+    height: 50px;
+  }
+  .navbarTrigger {
+    display: block;
+  }
+  #navbar_mobile_1 {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    /* 釘在最上方 */
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 200;
+    -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    /* 平板與手機logo尺寸大小 */
+    /* 隱藏功能列 因為要換下拉式選單 */
+  }
+  #navbar_mobile_1 .container {
+    margin: 0;
+  }
+  #navbar_mobile_1 .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #navbar_mobile_1 .image {
+    width: 200px;
+    height: 50px;
+    padding-left: 10px;
+  }
+  #navbar_mobile_1 .main_list {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    /* 下拉選單顏色大小 */
+  }
+  #navbar_mobile_1 .main_list ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    list-style: none;
+  }
+  #navbar_mobile_1 .main_list ul li {
+    width: 100%;
+    text-align: center;
+  }
+  #navbar_mobile_1 .main_list ul li a {
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    line-height: 65px;
+  }
+  #navbar_mobile_1 .main_list ul li a:hover {
+    color: #00E676;
+  }
+  #navbar_mobile_1 .show_list {
+    height: auto;
+    display: none;
+  }
+  #navbar_mobile_1 .media_button {
+    display: block;
+  }
+}
+
+/* Animation */
+.navbarTrigger {
+  cursor: pointer;
+  width: 30px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+
+.navbarTrigger i {
+  background-color: #000;
+  border-radius: 2px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+
+.navbarTrigger i:nth-child(1) {
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navbarTrigger i:nth-child(2) {
+  margin: 5px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navbarTrigger i:nth-child(3) {
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navbarTrigger.active i:nth-child(1) {
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
+}
+
+.navbarTrigger.active i:nth-child(2) {
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
+}
+
+.navbarTrigger.active i:nth-child(3) {
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes inM {
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes outM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes outM {
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes inT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes inT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+            transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+            transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes outT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+            transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+            transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes inBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+keyframes inBtm 0% {
+  -webkit-transform: translateY(0px) rotate(0deg);
+          transform: translateY(0px) rotate(0deg);
+}
+
+keyframes inBtm 50% {
+  -webkit-transform: translateY(-9px) rotate(0deg);
+          transform: translateY(-9px) rotate(0deg);
+}
+
+keyframes inBtm 100% {
+  -webkit-transform: translateY(-9px) rotate(135deg);
+          transform: translateY(-9px) rotate(135deg);
+}
+
+@-webkit-keyframes outBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes outBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+            transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+            transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+/* 重疊問題class="a"和class="b" */
+.a {
+  width: 100%;
+  height: 100px;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+hr {
+  width: 100px;
+  text-align: center;
+}
+
+#section_1 {
+  padding-top: 100px;
+}
+
+#section_1 img {
+  width: 100%;
+  padding-top: 20px;
+}
+
+#section_2 {
+  padding-top: 60px;
+}
+
+.mix {
+  width: 100%;
+}
+
+#section_3 {
+  padding-top: 100px;
+}
+
+#section_3 img {
+  width: 100%;
+}
+
+#section_3 .container-fluid {
+  text-align: center;
+}
+
+.litem-content {
+  position: relative;
+  padding: 10px;
+}
+
+.litem-content .litem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.litem-content .litem h1 {
+  margin: 0;
+  color: #007bff;
+}
+
+.litem-content .litem:hover {
+  opacity: 0.5;
+}
+
+.litem-content:hover .litem {
+  opacity: 0.5;
+}
+
+.litem-content:hover img {
+  opacity: 0.3;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 75%;
+}
+
+#section_4 {
+  padding-bottom: 100px;
+}
+
+#footer {
+  background-color: #000;
+  width: 100%;
+  padding-top: 18px;
+}
+
+#footer .small {
+  font-size: 8px;
+}
+
+#footer .card_1 {
+  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+}
+
+#footer .card_2 {
+  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#footer .card_3 {
+  text-align: center;
+  font-size: 8px;
+}
+
+#footer .container {
+  margin-top: 45px;
+}
+
+#footer .hr1 {
+  height: 1px;
+  border: none;
+  border-top: 1px solid #555555;
+  width: 250px;
+}
+
+/* top */
+#BackToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  color: #96b2c3;
+}
+
+#BackToTop:hover {
+  color: rgba(150, 178, 195, 0.5);
+}
+
+#footer_moblie {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  #footer {
+    display: none;
+  }
+  #footer_moblie {
+    display: block;
+    background-color: #000;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  #footer_moblie .card_1 {
+    color: white;
+    padding: 20px;
+    font-size: 10px;
+    text-align: left;
+  }
+  #footer_moblie .card_2 {
+    color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  #footer_moblie .card_3 {
+    text-align: center;
+    font-size: 8px;
+  }
+  #footer_moblie .tabs {
+    display: none;
+  }
+  #footer_moblie .show {
+    display: block;
+    font-weight: bold;
+  }
+  #footer_moblie .btn_footer {
+    position: relative;
+    color: white;
+    letter-spacing: 2px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 1px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    font-size: 10px;
+  }
+  #footer_moblie .btn_footer:hover {
+    font-weight: bold;
+  }
+}
+/*# sourceMappingURL=style.css.map */
