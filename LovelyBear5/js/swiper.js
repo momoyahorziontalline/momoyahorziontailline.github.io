@@ -24,12 +24,12 @@ var swiper = new Swiper('.swiper-container', {
 
 //banner
 $('.carousel').carousel({
-    interval: 2000
+    interval: 5000
 });
 
-$('.ccc').carousel({
-    interval: 1000
-});
+// $('.ccc').carousel({
+//     interval: 1000
+// });
 
 // section_navbar 滾動效果
 var intViewportHeight = window.innerHeight;
