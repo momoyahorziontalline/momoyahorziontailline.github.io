@@ -9,9 +9,10 @@
     #banner_mobile{
         display: block;
     }
+    #banner_mobile .carousel-item img{
+        height: 100vh;
+    }
 }
 
-#banner_mobile .carousel-item img{
-    height: 100vh;
-}
+
 
