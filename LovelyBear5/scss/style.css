@@ -700,6 +700,7 @@ html, body {
 #footer .card_3 {
   text-align: center;
   font-size: 8px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #footer .container {
@@ -760,6 +761,7 @@ html, body {
   #footer_moblie .card_3 {
     text-align: center;
     font-size: 8px;
+    color: rgba(255, 255, 255, 0.8);
   }
   #footer_moblie .tabs {
     display: none;
