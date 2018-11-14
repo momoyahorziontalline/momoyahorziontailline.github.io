@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400|Playfair+Display:400,400i");
 @import url("@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css");
 * {
-  font-family: 'cwTeXFangSong', serif;
+  font-family: "cwTeXFangSong", serif;
   font-weight: 300;
   letter-spacing: 3px;
 }
