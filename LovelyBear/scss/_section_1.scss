@@ -1,0 +1,57 @@
+//電腦版
+
+#section_1 {
+    padding-top: 100px;
+    // 區塊間距
+    img{
+        width: 100%;
+        padding-top: 20px;
+    }
+    hr{
+        width: 100px;
+        text-align: center;
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#section_1_mobile{
+    display: none;
+}
+
+//手機板
+@media screen and (max-width:$sm){
+    #section_1{
+        display: none;
+    }
+
+    #section_1_mobile{
+        display: block;
+        padding-top: 50px;
+        .title{
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            width: 100%;
+            padding: 10px 80px;
+        }
+        hr{
+            width: 100px;
+            text-align: center;
+        }
+    }   
+}
+    
+
+
+
+
+
+
+
+
+
+
