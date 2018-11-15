@@ -103,9 +103,10 @@
                         <br>
                         我知道不能侷限自己，還有很多我需要學習的，期許自己能在這條學習的路上不斷前進。
                     </p>
-                        <div class="text-center">
-                            <a href="https://drive.google.com/open?id=1wz-rUSu43r8boQ0Pd9cvMRp_oeTRpkyh" target="_blank">PDF Resume</a>
-                        </div>
+                    <div class="text-center">
+                        <a href="https://drive.google.com/open?id=1wz-rUSu43r8boQ0Pd9cvMRp_oeTRpkyh" target="_blank">PDF
+                            Resume</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -163,22 +164,6 @@
         <div class="row">
             <div class="col">
                 <div id="skill" class="mt-5 animated">
-                    <!-- <div class="skill-container " style="background: white; height:250px;">
-                        <ul class="list-inline clearfix">
-                            <li class="list-inline-item" style="width: 25%;">
-                                <span style="color:#90CAD5">Basic</span>
-                            </li>
-                            <li class="list-inline-item" style="width: 25%;">
-                                <span style="color:#008ABB">Medium</span> Trying to improve...
-                            </li>
-                            <li class="list-inline-item" style="width: 25%;">
-                                <span style="color:#00457C">High</span> Pretty good.
-                            </li>
-                            <li class="list-inline-item" style="width: 25%;">
-                                <span style="color:#001B42">Master</span>
-                            </li>
-                        </ul>
-                    </div> -->
                     <div class="skill-container">
                         <div class="skill-graph skill-Illustrator"></div>
                         <p>Illustrator</p>
@@ -243,8 +228,7 @@
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>設計模擬一般電商網站</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>Bootstrap4 + SCSS 規畫響應式網頁版型</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>運用Javascript、jQuery撰寫而成</li>
-                        <li class="pt-2"><a href="https://momoyahorziontalline.github.io/LovelyBear/" class="bt"
-                                target="blank">LINK</a></li>
+                        <li class="pt-2"><a href="https://momoyahorziontalline.github.io/LovelyBear/" class="bt" target="blank">LINK</a></li>
                     </ul>
                 </div>
             </div>
@@ -260,8 +244,7 @@
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>設計模擬一般餐廳網站</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>Bootstrap4 + SCSS 規畫響應式網頁版型</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>運用Javascript、jQuery撰寫而成</li>
-                        <li class="pt-2"><a href="https://choosemecafe.github.io" class="bt"
-                                target="blank">LINK</a></li>
+                        <li class="pt-2"><a href="https://choosemecafe.github.io" class="bt" target="blank">LINK</a></li>
                     </ul>
                 </div>
             </div>
@@ -288,9 +271,6 @@
                         <a href="mailto:momo900@gmail.com" target="_blank">
                             <i class="far fa-envelope"></i>email
                         </a>
-                        <!-- <a href="https://www.instagram.com/__0328_/" target="_blank">
-                                <i class="fab fa-instagram"></i>instagram
-                        </a> -->
                         <a href="https://github.com/momoyahorziontalline?tab=repositories" target="_blank">
                             <i class="fab fa-github-square"></i>github
                         </a>
@@ -298,6 +278,9 @@
                 </div>
             </div>
     </section>
+    <a href="#top">
+        <div class="backtop re"> <i class="fa fa-chevron-up fa-2x"></i></div>
+    </a>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -341,7 +324,7 @@
 
                 //Scroll and don't show hash
                 $('html, body').animate({
-                    'scrollTop': $target.offset().top
+                    'scrollTop': $target.offset().top1
                 }, 750, 'easeInOutExpo');
 
             });
@@ -376,7 +359,29 @@
                 $(this).addClass('fadeInUp');
                 $('#contact').css('visibility', 'visible')
             }, { offset: '90%' });
-        })
+        });
+
+        //backtop
+        //hides back to top button
+        $('.backtop').hide();
+
+        //button fade in fade out 
+        $(document).scroll(function () {
+
+            if ($(this).scrollTop() > 80) {
+                $('.backtop').fadeIn();
+            } else {
+                $('.backtop').fadeOut();
+            }
+        });
+
+        //animate scroll to top
+        $('.backtop').on('click', function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 500)
+        });
+
     </script>
 </body>
 

@@ -111,7 +111,6 @@ $lightgreen: #90CAD5;
     padding: 40px;
     background: rgba(0,0,0,.7);
     .navbar-toggler-icon{
-      // background-color: white;
       border-radius: 5px 5px 5px 5px;
       .white{
         color: white;
@@ -450,9 +449,26 @@ $lightgreen: #90CAD5;
    }
 }
 
-
-
 .border-color{
   color:#001A40;
 } 
+
+.backtop {
+  width: 55px;
+  height: 55px;
+  background-color: #BDBDBD;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  padding-top: 10px;
+  position: fixed;
+  right: 15px;
+  bottom: 0px;
+  opacity: 0.8;
+  .fa-chevron-up {
+    color: #fff;
+    margin-left: 3px;
+  }
+}
+
+
  

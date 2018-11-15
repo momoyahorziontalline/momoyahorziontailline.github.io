@@ -615,4 +615,22 @@
 .border-color {
   color: #001A40;
 }
+
+.backtop {
+  width: 55px;
+  height: 55px;
+  background-color: #BDBDBD;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  padding-top: 10px;
+  position: fixed;
+  right: 15px;
+  bottom: 0px;
+  opacity: 0.8;
+}
+
+.backtop .fa-chevron-up {
+  color: #fff;
+  margin-left: 3px;
+}
 /*# sourceMappingURL=style.css.map */
