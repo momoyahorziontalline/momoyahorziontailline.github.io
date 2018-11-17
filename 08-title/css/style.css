@@ -1,0 +1,775 @@
+/* navbar */
+* {
+    font-family: cwTeXYen;
+    /* cwTeXFangSong（仿宋體）、cwTeXHei（黑體）、cwTeXMing（明體）、cwTeXYen（圓體）和cwTeXKai（楷體） */
+}
+
+html {
+    position: relative;
+    /* height: 3000px;   */
+    /* 記得必須拿掉 */
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+/* section_navbar */
+.logo{
+    width: 100px;
+}
+
+.logo.show{
+    width: 50px;
+}
+
+.navbar_bgcolor{
+    background-color: rgba(125, 100, 170, 0.5);
+    width: 100%;
+}
+
+.nav-link{
+    font-size: 16px;
+}
+
+.navbar.fixed .nav-link{
+    font-size:12px;
+   
+}
+
+.navbar.fixed{
+   background-color: rgb(125, 100, 170);
+   height: 50px;
+   transform: 0.10s; 
+}
+
+/* 修改手機版漢堡列的顏色 */
+.custom-toggler.navbar-toggler {
+    border-color: white;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+/* 標題顏色 */
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+} 
+
+#section_banner.fixed {
+    padding-top: 20px;
+}
+
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+/* section_banner */
+#section_banner {
+    width: 100%;
+}
+
+.swiper-container {
+    width: 80%;
+    height: 50%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    /* background-image: url("./img/coffee.png"); */
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+}
+
+/* 設定圖片大小 */
+.banner_width_height {
+    width: 100%;
+    height: 100%;
+}
+
+/* 手機版 */
+@media screen and (max-width: 375px) {
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+#section_banner_c{
+    position: relative;
+    
+}
+#section_navbar_c{
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    width: 100%;
+}
+#section_banner{
+        display:none;
+    }
+
+#section_navbar{
+    display:none;
+}
+
+/* 手機版 */
+@media screen and (max-width: 500px) {
+    #section_banner_c{
+        display:none;
+    }
+
+    #section_navbar_c{
+        display:none;
+    }
+    #section_banner{
+        display: block;
+    }
+
+    #section_navbar{
+        display: block;
+    }
+
+    .logo.show{
+        width: 50px;
+    }
+
+    .nav-link.show{
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+/* image */
+.grid {
+    position: relative;
+}
+
+.item1 {
+    display: block;
+    position: absolute;
+    width: 32.2%;
+    height: 400px;
+    margin: 5px;
+    z-index: 1;
+    text-align: center;
+    line-height: 150px;
+    background-image: url("./img/bonsai-3647754_1920.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.item2 {
+    display: block;
+    position: absolute;
+    width: 32.2%;
+    height: 200px;
+    margin: 5px;
+    z-index: 1;
+    text-align: center;
+    line-height: 150px;
+    background-image: url("./img/fat-plants-3369055_1920.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.item3 {
+    display: block;
+    position: absolute;
+    width: 32.2%;
+    height: 400px;
+    margin: 5px;
+    z-index: 1;
+    text-align: center;
+    line-height: 150px;
+    background-image: url("./img/201610192228110.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.item4 {
+    display: block;
+    position: absolute;
+    width: 32.2%;
+    height: 400px;
+    margin: 5px;
+    z-index: 1;
+    text-align: center;
+    line-height: 150px;
+    background-image: url("./img/201702021819510.JPG");
+    background-size: cover;
+    background-position: center;
+}
+
+.item5 {
+    display: block;
+    position: absolute;
+    width: 32.2%;
+    height: 200px;
+    margin: 5px;
+    z-index: 1;
+    text-align: center;
+    line-height: 150px;
+    background-image: url("./img/201704040951130.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.item6 {
+    display: block;
+    position: absolute;
+    width: 32.2%;
+    height: 200px;
+    margin: 5px;
+    z-index: 1;
+    text-align: center;
+    line-height: 150px;
+    background-image: url("./img/DisplayCut.jpg");
+    background-size: cover;
+    background-position: top;
+}
+
+.item.muuri-item-dragging {
+    z-index: 3;
+}
+
+.item.muuri-item-releasing {
+    z-index: 2;
+}
+
+.item.muuri-item-hidden {
+    z-index: 0;
+}
+
+.item-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* 標題 */
+.titile_1 {
+    text-align: center;
+    padding: 20px 0;
+    color: rgb(125, 100, 170);
+    font-size: 24px;
+}
+
+.box {
+    width: 120px;
+    height: 5px;
+    background-color: rgb(125, 100, 170);
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* 手機版 */
+#section_image_moblie {
+    display: none;
+}
+
+.photo{
+   padding: 10px 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #section_image {
+        display: none;
+    }
+
+    #section_image_moblie {
+        display: block;
+    }
+}
+
+/* story */
+#section_story {
+    background-image: url("./img/flower_story-01.png");
+    /* background-color: black; */
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 標題 */
+.titile_2 {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    color: rgb(125, 100, 170);
+    font-size: 24px;
+}
+
+.box {
+    width: 120px;
+    height: 5px;
+    background-color: rgb(125, 100, 170);
+    margin: auto;
+    margin-top: 10px;
+    opacity: 1;
+}
+
+#section_story p {
+    text-align: center;
+    color: rgb(125, 100, 170);
+    font-size: 16px;
+
+}
+
+/* 按鈕 */
+@-webkit-keyframes sheen {
+    0% {
+        -webkit-transform: skewY(-45deg) translateX(0);
+        transform: skewY(-45deg) translateX(0);
+    }
+
+    100% {
+        -webkit-transform: skewY(-45deg) translateX(12.5em);
+        transform: skewY(-45deg) translateX(12.5em);
+    }
+}
+
+@keyframes sheen {
+    0% {
+        -webkit-transform: skewY(-45deg) translateX(0);
+        transform: skewY(-45deg) translateX(0);
+    }
+
+    100% {
+        -webkit-transform: skewY(-45deg) translateX(12.5em);
+        transform: skewY(-45deg) translateX(12.5em);
+    }
+}
+
+.wrapper {
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    padding: 0.3em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    color: #7d64aa;
+    border: 2px solid #7d64aa;
+    font-size: 20px;
+    display: inline-block;
+    border-radius: 50px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.button:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    -webkit-transform: skewX(-45deg) translateX(0);
+    transform: skewX(-45deg) translateX(0);
+    -webkit-transition: none;
+    transition: none;
+}
+
+.button:hover {
+    background-color: #7d64aa;
+    color: #fff;
+    border-bottom: 4px solid #644e8d;
+    text-decoration: none;
+}
+
+.button:hover:before {
+    -webkit-transform: skewX(-45deg) translateX(13.5em);
+    transform: skewX(-45deg) translateX(13.5em);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+/* activity */
+
+        .container2 {
+            display: flex;
+        }
+
+        .section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            transition: flex .4s ease;
+            position: relative;
+            height: 500px;
+
+        }
+
+        .section .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: background-color .8s ease;
+        }
+
+        .section .content {
+            z-index: 2;
+        }
+
+        .section:hover {
+            flex: 2;
+        }
+
+        .section:hover .overlay {
+            background-color: rgba(0, 0, 0, 0.95);
+        }
+
+        #weddingDesign {
+            background-image: url("./img/04-01.jpg");
+        }
+
+        #restaurantEvent {
+            background-image: url("./img/04-02.png");
+        }
+
+        #DIYhandMade {
+            background-image: url("./img/04-03.jpg");
+        }
+
+        #courtyardLandscaping {
+            background-image: url("./img/04-04.jpg");
+        }
+
+        #section_activity_moblie {
+            display: none;
+        }
+
+        .section_moblie {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            transition: flex .4s ease;
+            position: relative;
+            height: 100px;
+
+        }
+
+        .section_moblie .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: background-color .8s ease;
+        }
+
+        .section_moblie .content {
+            z-index: 2;
+        }
+
+        .section_moblie:hover {
+            flex: 2;
+        }
+
+        .section_moblie:hover .overlay {
+            background-color: rgba(0, 0, 0, 0.95);
+        }
+
+        @media screen and (max-width: 500px) {
+            #section_activity {
+                display: none;
+            }
+
+            #section_activity_moblie {
+                display: block;
+            }
+        }
+
+/* table */
+ /* 電腦版 */
+ #section_table {
+    width: 100%;
+    height: 350px;
+    background-color: rgb(125, 100, 170);
+    text-align: center;
+    color: white;
+    padding: 110px 300px;
+    font-size:24px; 
+}
+
+.icon {
+    padding: 40px;
+}
+
+/* 手機版 */
+#section_table_moblie {
+    display: none;
+    width: 100%;
+    height: 380px;
+    color: white;
+    background-color: rgb(125, 100, 170);
+    padding: 20px 130px;
+    font-size:24px;
+}
+
+.icon_moblie {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+
+
+/* iphone X */
+@media screen and (max-width: 375px) {
+    #section_table {
+        display: none;
+    }
+
+    #section_table_moblie {
+        display: block;
+    }
+
+    .icon_moblie {
+        text-align: center;
+        padding: 8px;
+    }
+
+}
+
+
+/* footer */
+
+#section_footer {
+    width: 100%;
+    height: 450px;
+    background-color: yellow;
+}
+
+.footer_box_top {
+    width: 100%;
+    height: 400px;
+    background-color: #EFEFEF;
+}
+
+.footer_box_bottom {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    float: left;
+    clear: both;
+}
+
+.footer_title {
+    color: rgb(125, 100, 170);
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size: 24px;
+}
+
+.footer_title_small {
+    color: rgb(125, 100, 170);
+    font-size: 16px;
+    padding-left: 50px;
+}
+
+.footer_title_connection_first {
+    color: rgb(125, 100, 170);
+    padding-top: 50px;
+    padding-left: 50px;
+
+}
+
+.footer_title_connection {
+    color: rgb(125, 100, 170);
+    padding-left: 50px;
+
+}
+
+.footer_bottom_p {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* 圖形 */
+#loading {
+    /* 旋轉時間 */
+    animation: rotation 20s infinite linear;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#loading1 {
+    /* 旋轉時間 */
+    animation: rotation1 10s infinite linear;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotation1 {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+/* 手機版 */
+#section_footer_moblie {
+    display: none;
+    width: 100%;
+    height: 850px;
+    margin: 0 auto;
+}
+
+.footer_top_moblie_bg {
+    display: none;
+    width: 100%;
+    height: 800px;
+    background-color:#EFEFEF;
+}
+
+.footer_top_moblie_titile {
+    text-align: center;
+    color: rgb(125, 100, 170);
+    padding: 20px 100px;
+    font-size: 30px;
+    
+}
+
+ .footer_top_moblie_titile_first {
+    text-align: center;
+    color: rgb(125, 100, 170);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 30px;
+}
+
+.footer_top_moblie_titile_last {
+    text-align: center;
+    color: rgb(125, 100, 170);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 30px; 
+}
+
+.footer_moblie_img{
+    float: right;
+}
+
+.footer_bottom_moblie_bg{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+
+.footer_bottom_moblie_p{
+    color: white;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 500px) {
+    #section_footer {
+        display: none;
+    }
+
+    #section_footer_moblie {
+        display: block;
+    }
+
+    .footer_top_moblie_bg{
+        display: block;
+    }
+
+    .footer_bottom_moblie_bg{
+        display: block;
+    }
+}
