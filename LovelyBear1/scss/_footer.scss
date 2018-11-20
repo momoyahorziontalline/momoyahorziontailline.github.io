@@ -61,9 +61,12 @@ $iconcolor1:rgba(150, 178, 195,0.5);
         padding-top: 10px;
         padding-bottom: 10px;
         text-align: center;
+        .container{
+            padding: 5px;
+        }
         .card_1{
             color: white;
-            padding: 20px;
+            padding: 0 20px;
             font-size: 12px;
             text-align: left;
         }
@@ -71,12 +74,16 @@ $iconcolor1:rgba(150, 178, 195,0.5);
             color: white;
             flex-direction: column;
             text-align: center;
-            padding: 20px; 
+            padding: 0 20px; 
             font-size: 12px;
+            img{
+                width:50px;
+            }
         }
         .card_3{
             text-align: center;
             font-size: 8px;
+            color: rgba(255, 255, 255, 0.5)
         }
         .tabs{
             display:none;

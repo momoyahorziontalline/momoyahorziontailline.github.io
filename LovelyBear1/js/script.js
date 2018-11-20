@@ -1,9 +1,10 @@
 //******************
 //*     jquery
 //******************
+//navbar
 $('.navbarTrigger').click(function () {
   $(this).toggleClass('active');
-  console.log("Clicked menu");
+  // console.log("Clicked menu");
   $("#mainListDiv").toggleClass("show_list");
   $("#mainListDiv").fadeIn();
 
@@ -13,6 +14,30 @@ $('.navbarTrigger').click(function () {
 $('.main_list ul li a').click(function () {
   /* always close responsive nav after click */
   $('.navbarTrigger:visible').click();
+});
+
+//banner
+$(function () {
+  var $item = $('.carousel .carousel-item');
+  var $wHeight = $(window).height();
+  $item.height($wHeight);
+  $item.addClass('full-screen');
+
+  $('.carousel img').each(function () {
+    var $src = $(this).attr('src');
+    var $color = $(this).attr('data-color');
+    $(this).parent().css({
+      'background-image': 'url(' + $src + ')',
+      'background-color': $color
+    });
+    $(this).remove();
+  });
+
+  //縮放視窗調整視窗高度
+  $(window).on('resize', function () {
+    $wHeight = $(window).height();
+    $item.height($wHeight);
+  });
 });
 
 //******************

@@ -24,20 +24,6 @@
 	<link rel="icon" href="./img/LovelyBear-02.png" type="image/gif" sizes="20x20">
 
 	<link rel="stylesheet" href="./css/style.min.css">
-
-	<style>
-		.full-screen {
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-		}
-
-		.carousel-item>a {
-			display: block;
-			height: 100%;
-		}
-	</style>
-
 </head>
 
 <body>
@@ -135,7 +121,6 @@
 
 	<!-- 電腦版 -->
 	<div id="section_1">
-		<!-- <h1 class="title">-熊優惠區-</h1> -->
 		<!-- 水平線 -->
 		<hr>
 		<div class="container">
@@ -159,7 +144,6 @@
 
 	<!-- 手機版 -->
 	<div id="section_1_mobile">
-		<!-- <h1 class="title">-熊優惠區-</h1> -->
 		<!-- 水平線 -->
 		<hr>
 		<div class="container">
@@ -207,7 +191,6 @@
 
 	<!-- 電腦版 -->
 	<div id="section_3">
-		<!-- <h1 class="title">-熊熊品項-</h1> -->
 		<!-- 水平線 -->
 		<hr>
 		<div class="container">
@@ -266,7 +249,6 @@
 
 	<!-- 手機版 -->
 	<div id="section_3_mobile">
-		<!-- <h1 class="title">-熊熊品項-</h1> -->
 		<!-- 水平線 -->
 		<hr>
 		<div class="container">
@@ -361,16 +343,6 @@
 				<div class="col-sm-3 card_1">
 					<h6>其他資訊</h6>
 					<hr class="hr1">
-					<!-- <div class="row">
-											<div class="col-6"><i class="fas fa-angle-double-right fa-xs"></i> 會員權益</div>
-											<div class="col-6"><i class="fas fa-angle-double-right fa-xs"></i> 紅利回饋</div>
-											<div class="w-100"></div><br>
-											<div class="col-6"><i class="fas fa-angle-double-right fa-xs"></i> 售後服務</div>
-											<div class="col-6"><i class="fas fa-angle-double-right fa-xs"></i> 常見問題</div>
-											<div class="w-100"></div><br>
-											<div class="col-6"><i class="fas fa-angle-double-right fa-xs"></i> 企業徵才</div>
-											<div class="col-6"><i class="fas fa-angle-double-right fa-xs"></i> 隱私權保護</div>
-									</div> -->
 					<img width="60px" src="./img/FB.png" alt="">
 					<img width="60px" src="./img/IG.png" alt="">
 					<img width="60px" src="./img/LINE.png" alt="">
@@ -410,10 +382,10 @@
 				<p style="font-size:8px"> *如遇假日及國定假日暫停客服服務</p>
 			</div>
 			<div id="tab_content3" class="tabs card_2">
-				<img width="50px" src="./img/FB.png" alt="">
-				<img width="50px" src="./img/IG.png" alt="">
-				<img width="50px" src="./img/LINE.png" alt="">
-				<img width="50px" src="./img/youtube.png" alt="">
+				<img src="./img/FB.png" alt="">
+				<img src="./img/IG.png" alt="">
+				<img src="./img/LINE.png" alt="">
+				<img src="./img/youtube.png" alt="">
 			</div>
 			<div id="tab_content4" class="tabs card_2">
 				<div class="col-12">
@@ -459,37 +431,6 @@
 
 	<!-- Demo JS -->
 	<script src="./js/script.js"></script>
-
-	<script>
-		$(function () {
-			var $item = $('.carousel .carousel-item');
-			var $wHeight = $(window).height();
-			$item.height($wHeight);
-			$item.addClass('full-screen');
-
-			$('.carousel img').each(function () {
-				var $src = $(this).attr('src');
-				var $color = $(this).attr('data-color');
-				$(this).parent().css({
-					'background-image': 'url(' + $src + ')',
-					'background-color': $color
-				});
-				$(this).remove();
-			});
-
-			//縮放視窗調整視窗高度
-			$(window).on('resize', function () {
-				$wHeight = $(window).height();
-				$item.height($wHeight);
-			});
-
-			//輪播秒數與滑入停止
-			// $('.carousel').carousel({
-			// 	interval: 5000,
-			// 	pause: "hover"
-			// });
-		});
-	</script>
 </body>
 
 </html>

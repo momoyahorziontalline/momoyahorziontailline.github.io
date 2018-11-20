@@ -1,17 +1,15 @@
-// #banner_mobile{
-//     display: none;
-// }
+//滿版
+.full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-// @media screen and (max-width:$lg) {
-//     #banner{
-//         display: none;
-//     }
-//     #banner_mobile{
-//         display: block;
-//     }
-// }
+.carousel-item{
+    a {
+        display: block;
+        height: 100%;
+    }
+}
 
-// #banner_mobile .carousel-item img{
-//     height: 100vh;
-// }
 
