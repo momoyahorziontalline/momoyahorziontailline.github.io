@@ -96,9 +96,6 @@
         right: 0;
         left: 0;
         z-index: 200;
-        // -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
-        // -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
-        // box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
         .container {
             margin: 0;
         }
@@ -150,16 +147,16 @@
         .media_button {
             display: block;
         } 
+        .cart{
+            cursor: pointer;
+            margin: auto;
+            position: absolute;
+            right: 15px;
+            top: 20px;
+        }  
     }
 }
 
-.cart{
-    cursor: pointer;
-    margin: auto;
-    position: absolute;
-    right: 15px;
-    top: 20px;
-}
 
 /* Animation */
 .navbarTrigger {
