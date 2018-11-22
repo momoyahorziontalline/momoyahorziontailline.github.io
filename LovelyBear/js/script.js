@@ -79,13 +79,6 @@ $(function () {
   });
 });
 
-//cover
-var cover = new TimelineMax();
-cover.to("#load", 0, { center: 0 })
-.to("#load", 5.0, { opacity: 0, scale: 1 }, 1.5)
-.to("#section_cover", 5.0, { height: 0}, 2);
-
-
 
 
 
