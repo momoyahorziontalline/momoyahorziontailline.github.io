@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <style>
+        .yourElement {
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div data-aos="fade-right"><img src="./img/banner/banner-1.jpg" alt=""></div> -->
+
+    <h1 class="animated infinite flash delay-5s ">Example</h1>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        $('#yourElement').addClass('animated flashOutLeft');
+
+        
+    </script>
+</body>
+
+</html>
