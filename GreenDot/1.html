@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            font: 49px "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+        }
+
+        .letters {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            height: 200px;
+        }
+
+        .letter {
+            display: inline-block;
+            line-height: 1em;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="letters">
+        <div class="letter">S</div>
+        <div class="letter">u</div>
+        <div class="letter">n</div>
+        <div class="letter">n</div>
+        <div class="letter">y</div>
+        <div class="letter"> </div>
+        <div class="letter">M</div>
+        <div class="letter">o</div>
+        <div class="letter">r</div>
+        <div class="letter">n</div>
+        <div class="letter">i</div>
+        <div class="letter">n</div>
+        <div class="letter">g</div>
+        <div class="letter">s</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script>
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.letter',
+                scale: [4, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 950,
+                delay: function (el, i) {
+                    return 70 * i;
+                }
+            }).add({
+                targets: '.letters',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+    </script>
+</body>
+
+</html>

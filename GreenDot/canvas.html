@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            font-family: "Microsoft JhengHei", "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+            width: 100%;
+            height: 100%;
+            /* 關閉捲軸 */
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
+        #section_1 {
+            position: fixed;
+            top: 14px;
+            left: 20px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header_logo {
+            width: 30px;
+            margin-left: 10px;
+        }
+
+        .header_text {
+            width: 50px;
+        }
+
+        #section_2 {
+            height: 300px;
+            color: #13AE67;
+            text-align: center;
+            font-size: 40px;
+
+        }
+
+        .letters {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            height: 200px;
+        }
+
+        .letter {
+            display: inline-block;
+            line-height: 1em;
+            font-weight: 800;
+        }
+
+        #section_3 {
+            height: 140px;
+            position: fixed;
+            bottom: 14px;
+            left: 0px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+        }
+
+        .section_list {
+            color: #13AE67;
+            text-decoration: none;
+            list-style: none;
+            letter-spacing: 1px;
+            font-size: 14px;
+            margin-top: 70px;
+            line-height: 25px;
+
+        }
+
+        .section_list li:hover {
+            color: #fff;
+        }
+
+        .setion_portfolio {
+            color: #13AE67;
+            text-decoration: none;
+            list-style: none;
+            letter-spacing: 1px;
+            font-size: 14px;
+            writing-mode: vertical-lr;
+        }
+
+        .setion_portfolio:hover {
+            color: #fff;
+        }
+
+        /* 圖形 */
+        #dot_1 {
+            /* 旋轉時間 */
+            animation: rotation 10s infinite linear;
+
+        }
+
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+         #dot_2 {
+            /* 旋轉時間 */
+            animation: rotation_2 20s infinite linear;
+
+        }
+
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes rotation_2 {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id=section_1>
+        <div class="header_logo">
+            <a href="#"><img class="header_logo" src="./img/2018-11-23-AI-GREENDIOT-05.png" alt=""></a>
+        </div>
+        <div class="header_text">
+            <a href="#"><img class="header_text" src="./img/2018-11-23-AI-GREENDIOT-04.png" alt=""></a>
+        </div>
+        <div class="header_fb">
+            <a href="#"><img class="header_text" src="" alt=""></a>
+        </div>
+    </header>
+
+
+    <div id="section_2">
+        <div class="letters">
+            <!-- <div class="letter">W</div>
+            <div class="letter">E</div>
+            <div class="letter">L</div>
+            <div class="letter">C</div>
+            <div class="letter">O</div>
+            <div class="letter">M</div>
+            <div class="letter">E</div>
+            <div class="letter"> </div>
+            <div class="letter">T</div>
+            <div class="letter">O</div>
+            <div class="letter"> </div> -->
+            <div class="letter">綠</div>
+            <div class="letter">點</div>
+            <div class="letter">科</div>
+            <div class="letter">技</div>
+        </div>
+    </div>
+
+
+    <div id="section_3">
+        <ul class="section_list">
+            <li>ABOUT</li>
+            <li>SERVICE</li>
+            <li>CONTACT</li>
+        </ul>
+        <ul class="setion_portfolio">
+            <li>PORTFOLIO</li>
+        </ul>
+    </div>
+
+    <div id="dot_1">
+        <img src="./img/2018-11-23-AI-GREENDIOT-06.png" alt="">
+    </div>
+    <div id="dot_2">
+        <img src="./img/2018-11-23-AI-GREENDIOT-07.png" alt="">
+    </div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.letter',
+                scale: [4, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 950,
+                delay: function (el, i) {
+                    return 70 * i;
+                }
+            }).add({
+                targets: '.letters',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+    </script>
+</body>
+
+</html>
