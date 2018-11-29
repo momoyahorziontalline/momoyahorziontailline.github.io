@@ -1,0 +1,20 @@
+/* SECTION_1 */
+#section_1 {
+    position: fixed;
+    top: 14px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header_logo {
+        width: 30px;
+        margin-left: 10px;
+    }
+    .header_text {
+         width: 50px;
+    }
+  }
+  
+  
+  
