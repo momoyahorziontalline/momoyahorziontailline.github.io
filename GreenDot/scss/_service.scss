@@ -1,0 +1,95 @@
+ /* service */
+
+ .service{
+    a {
+        text-decoration: none;
+        color: $white;
+        &:hover {
+            color: #03a9f4;
+        }
+    }
+    .service_button1 {
+        position: absolute;
+        // height: 40px;
+        // width: 100px;
+        // background: white;
+        left: 0;
+        bottom: 40px;
+        cursor: pointer;
+    }
+    .service_button1 li {
+        position: absolute;
+        left: 70px;
+        top: 15%;
+        list-style: none;
+        transform: translateX(-50%) translateY(-50%);
+        color: $green;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        &:hover{
+            color: $white;
+        }
+    }
+    .service_button2 {
+        position: absolute;
+        // height: 40px;
+        // width: 100px;
+        // background: white;
+        cursor: pointer;
+        right: 0;
+        top: 0;
+    }
+    .service_button2 li {
+        position: absolute;
+        // left: 50%;
+        right: 0;
+        top: 20px;
+        list-style: none;
+        transform: translateX(-50%) translateY(-50%);
+        color: $white;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        &:hover{
+            color: $white;
+        }
+    }
+    .service_overlay {
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: $black;
+        background: $green;
+        text-align: center;
+        top: 0;
+        left: 0;
+    }
+    
+    nav ul {
+        font-size: 4em;
+        list-style: none;
+        margin-top: 5%;
+    }
+    
+    nav ul li {
+        margin-top: 1%;
+    }
+    
+ }
+ 
+
+
+
+
+
+
+
+
+
+

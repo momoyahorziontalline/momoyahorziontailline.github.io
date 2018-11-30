@@ -1,92 +1,95 @@
- /*  */
+ /* about */
 
- a {
-    text-decoration: none;
-    color: white;
-}
+ .about{
+    a {
+        text-decoration: none;
+        color: $white;
+        &:hover {
+            color: #03a9f4;
+        }
+    }
+    .about_button1 {
+        position: absolute;
+        // height: 40px;
+        // width: 100px;
+        // background: white;
+        left: 0;
+        bottom: 70px;
+        cursor: pointer;
+    }
+    .about_button1 li {
+        position: absolute;
+        left: 70px;
+        top: 15%;
+        list-style: none;
+        transform: translateX(-50%) translateY(-50%);
+        color: $green;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        &:hover{
+            color: $white;
+        }
+    }
+    .about_button2 {
+        position: absolute;
+        // height: 40px;
+        // width: 100px;
+        // background: white;
+        cursor: pointer;
+        right: 0;
+        top: 0;
+    }
+    .about_button2 li {
+        position: absolute;
+        // left: 50%;
+        right: 0;
+        top: 20px;
+        list-style: none;
+        transform: translateX(-50%) translateY(-50%);
+        color: $white;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        &:hover{
+            color: $white;
+        }
+    }
+    .about_overlay {
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: $black;
+        background: $green;
+        text-align: center;
+        top: 0;
+        left: 0;
+        .content {
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+        h1{
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+    }
+    
+ }
+ 
 
-a:hover {
-    color: #03a9f4;
-}
 
-.button1 {
-    position: absolute;
-    height: 40px;
-    width: 100px;
-    background: white;
-    left: 0;
-    bottom: 0;
-    cursor: pointer;
-}
 
-.button1 p {
-    position: absolute;
-    left: 50%;
-    top: 15%;
-    transform: translateX(-50%) translateY(-50%);
-    color: black;
-    -webkit-user-select: none;
-    /* Chrome/Safari */
 
-    -moz-user-select: none;
-    /* Firefox */
 
-    -ms-user-select: none;
-    /* IE10+ */
-    /* Rules below not implemented in browsers yet */
 
-    -o-user-select: none;
-    user-select: none;
-}
 
-.button2 {
-    position: absolute;
-    height: 40px;
-    width: 100px;
-    background: white;
-    cursor: pointer;
-    right: 0;
-    top: 0;
-}
 
-.button2 p {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%) translateY(-50%);
-    color: black;
-    -webkit-user-select: none;
-    /* Chrome/Safari */
 
-    -moz-user-select: none;
-    /* Firefox */
 
-    -ms-user-select: none;
-    /* IE10+ */
-    /* Rules below not implemented in browsers yet */
-
-    -o-user-select: none;
-    user-select: none;
-}
-
-.overlay {
-    display: none;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: rgb(0, 0, 0);
-    background: #13AE67;
-    text-align: center;
-    top: 0;
-    left: 0;
-}
-
-nav ul {
-    font-size: 4em;
-    list-style: none;
-    margin-top: 5%;
-}
-
-nav ul li {
-    margin-top: 1%;
-}
