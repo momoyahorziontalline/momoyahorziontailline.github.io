@@ -1,0 +1,36 @@
+/* 圖形 */
+#dot_1 {
+    /* 旋轉時間 */
+    animation: rotation 10s infinite linear;
+    position: fixed;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#dot_2 {
+    /* 旋轉時間 */
+    animation: rotation_2 20s infinite linear;
+    position: fixed;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotation_2 {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}

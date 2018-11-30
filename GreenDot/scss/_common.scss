@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    clear: both;
+    font-family: "Microsoft JhengHei", "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+  
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    /* 關閉捲軸 */
+    overflow-y: hidden;
+    overflow-x: hidden;
+    // overflow: visible;
+}
+
+//設定螢幕大小
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px; 
