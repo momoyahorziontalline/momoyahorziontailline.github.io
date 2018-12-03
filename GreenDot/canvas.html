@@ -49,9 +49,8 @@
 
         <div id="section_2">
             <div id="typed-strings">
-                <p>Welcome to <strong> GreenDot </strong>.</p>
-                <p>歡迎來到綠點科技</p>
-                <p>綠點科技</p>
+                <p>Welcome to GreenDot.</p>
+                <p>歡迎來到<br>綠點科技</p>
             </div>
             <span id="typed"></span>
         </div>
@@ -558,6 +557,13 @@
             stringsElement: '#typed-strings'
         });
 
+        $("body").on("mouseenter mouseleave", function (event) { //挷定滑鼠進入及離開事件
+            if (event.type == "mouseenter") {
+                $(this).css({ "overflow-y": "scroll" }); //滑鼠進入
+            } else {
+                $(this).scrollTop(0).css({ "overflow-y": "hidden" }); //滑鼠離開
+            }
+        });
 
 
 
