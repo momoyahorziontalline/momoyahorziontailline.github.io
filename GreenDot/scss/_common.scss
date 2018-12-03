@@ -9,7 +9,8 @@ body {
     width: 100%;
     height: 100%;
     /* 關閉捲軸 */
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 //設定螢幕大小
