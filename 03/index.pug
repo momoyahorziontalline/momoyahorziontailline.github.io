@@ -1,0 +1,12 @@
+nav
+  ul
+    each val in [1,2,3,4,5]
+      li
+        a(href='#'+val)= 'Slide '+val
+
+.slides
+  each val in [1,2,3,4,5]
+    .slide(id=val)
+      .content
+        h2='Slide '+val
+        p='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, odit nihil tempora tenetur! Fugit reprehenderit saepe impedit at, expedita nemo nulla hic quia placeat ipsum sint, quis unde fugiat tenetur nobis illum. Nemo laboriosam laudantium aliquam illum fugiat incidunt nostrum, corrupti minus optio. Suscipit obcaecati harum voluptates est quod quasi?'
