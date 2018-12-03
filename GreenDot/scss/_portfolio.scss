@@ -1,12 +1,99 @@
-.setion_portfolio {
-    color: #13AE67;
-    text-decoration: none;
-    list-style: none;
-    letter-spacing: 1px;
-    font-size: 14px;
-    writing-mode: vertical-lr;
-}
+ /* portfolio */
 
-.setion_portfolio:hover {
-    color: #fff;
-} 
+ .portfolio{
+    a {
+        text-decoration: none;
+        color: $white;
+        &:hover {
+            color: #03a9f4;
+        }
+    }
+    .portfolio_button1 {
+        position: absolute;
+        // height: 40px;
+        // width: 100px;
+        // background: white;
+        right: 30px;
+        bottom: 63px;
+        cursor: pointer;
+        writing-mode: vertical-lr;
+    }
+    .portfolio_button1 li {
+        position: absolute;
+        // left: 70px;
+        // top: 15%;
+        list-style: none;
+        transform: translateX(-50%) translateY(-50%);
+        color: $green;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        writing-mode: vertical-lr;
+        &:hover{
+            color: $white;
+        }
+    }
+    .portfolio_button2 {
+        position: absolute;
+        // height: 40px;
+        width: 100px;
+        // background: white;
+        cursor: pointer;
+        right: 0;
+        top: 0;
+       
+    }
+    .portfolio_button2 li {
+        position: absolute;
+        // left: 50%;
+        right: 0;
+        top: 20px;
+        list-style: none;
+        transform: translateX(-50%) translateY(-50%);
+        color: $white;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+     
+        &:hover{
+            color: $white;
+        }
+    }
+    .portfolio_overlay {
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: $black;
+        background: $green;
+        text-align: center;
+        top: 0;
+        left: 0;
+        .content {
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+        h1{
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+    }
+    
+ }
+ 
+
+
+
+
+
+
+
+
+
+

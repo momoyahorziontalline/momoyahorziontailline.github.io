@@ -10,11 +10,8 @@
     }
     .service_button1 {
         position: absolute;
-        // height: 40px;
-        // width: 100px;
-        // background: white;
         left: 0;
-        bottom: 40px;
+        bottom: 60px;
         cursor: pointer;
     }
     .service_button1 li {
@@ -36,7 +33,7 @@
     .service_button2 {
         position: absolute;
         // height: 40px;
-        // width: 100px;
+        width: 100px;
         // background: white;
         cursor: pointer;
         right: 0;
@@ -69,16 +66,16 @@
         text-align: center;
         top: 0;
         left: 0;
-    }
-    
-    nav ul {
-        font-size: 4em;
-        list-style: none;
-        margin-top: 5%;
-    }
-    
-    nav ul li {
-        margin-top: 1%;
+        .content {
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+        h1{
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
     }
     
  }
