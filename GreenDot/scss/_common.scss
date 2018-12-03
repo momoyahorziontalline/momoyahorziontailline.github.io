@@ -58,33 +58,11 @@ $white: #fff;
     100% {background-color:red; left:0px; top:0px;}
 }
 
-// .container-fluid {
-//     width: 100%;
-//     height: 100%;
-//     overflow: hidden;
-//     position: relative;
-//   }
-  
-  .background {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  
-    mask-image: radial-gradient(
-        #13AE67 0%,
-        #13AE67 30%,
-      transparent 80%,
-      transparent
-    );
-  }
-  
+
   .circle-container {
     $particleNum: 200;
     $particleColor:#13AE67;
+    position: fixed;
   
     position: absolute;
     transform: translateY(-10vh);
@@ -133,7 +111,7 @@ $white: #fff;
       }
     }
   
-    $particleBaseSize: 20;
+    $particleBaseSize: 15;
   
     
     @for $i from 1 through $particleNum {

@@ -38,13 +38,22 @@
         </header>
 
 
-        <div id="section_2">
+        <!-- <div id="section_2">
             <div class="letters">
                 <div class="letter">綠</div>
                 <div class="letter">點</div>
                 <div class="letter">科</div>
                 <div class="letter">技</div>
             </div>
+        </div> -->
+
+        <div id="section_2">
+            <div id="typed-strings">
+                <p>Welcome to <strong> GreenDot </strong>.</p>
+                <p>歡迎來到綠點科技</p>
+                <p>綠點科技</p>
+            </div>
+            <span id="typed"></span>
         </div>
 
         <div class="about">
@@ -545,6 +554,9 @@
             $(".portfolio_overlay").fadeOut("slow");
         });
 
+        var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings'
+        });
 
 
 
