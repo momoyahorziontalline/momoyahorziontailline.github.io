@@ -2,15 +2,15 @@
     background-color: $bg_gray;
 
     .section_5_left{
-      .section_5_box{      
-        .section_5_card{    
-          margin-right: 1.5rem;
+      .section_5_box{
+        .section_5_card{ 
+          margin-right: 1.5rem;   
           .section_5_top{
             position: relative;
             img{
               width: 100%;
               border-radius: 0.5rem;
-              // transform: scale(1);
+              transform: scale(1);
               transition: all 0.5s ease-in-out;
               &:hover{
                 transform: scale(1.05);
@@ -36,10 +36,10 @@
     }
     
     .section_5_right{
-      .section_5_box{       
+      .section_5_box{
         .section_5_card{
           margin-right: 1.5rem;
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.5rem;      
           .section_5_top{
             position: relative;
             img{

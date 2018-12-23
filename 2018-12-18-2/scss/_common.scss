@@ -10,9 +10,6 @@ html,body{
     width: 100%;
     overflow-x: hidden; 
     font-size: 10px;
-    position: relative;
-      height: 100%;
-    
 }
 
 // 置中容器
@@ -70,7 +67,6 @@ p{
 
 [class*="col-"] {
     float: left;
-    // padding: 1.5rem;
 }
     
 .col-1 {width: 8.33%;}
@@ -125,7 +121,6 @@ p{
     }
 }
 
-// 標題，針對手機與平版
 .title{
     text-align: center;
     color: $title-color;  

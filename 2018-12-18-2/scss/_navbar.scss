@@ -1,5 +1,6 @@
 .nav-left {
   float: left;
+  margin-left: 8rem;
 }
 
 .nav-title {
@@ -20,6 +21,7 @@ a {
 
 .nav-fostrap {
   float: right;
+  margin-right: 5rem;
   ul {
     list-style-type: none;
     margin: 0;
@@ -196,28 +198,7 @@ a {
       }
     }
   }
-  /*   手機漢堡列大小、寬度、位置  */
-  /*   手機漢堡列 2,3 */
-  /* .navbar-fostrap.open span:nth-child(1) {
-    top: 18px;
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-  
-  .navbar-fostrap.open span:nth-child(2) {
-    opacity: 0;
-    left: -60px;
-  }
-  
-  .navbar-fostrap.open span:nth-child(3) {
-    top: 18px;
-    -webkit-transform: rotate(-135deg);
-    -moz-transform: rotate(-135deg);
-    -o-transform: rotate(-135deg);
-    transform: rotate(-135deg);
-  }  */
+
   .nav-fostrap {
     ul {
       padding-top: 50px;
@@ -270,3 +251,38 @@ a {
     right: 10px;
   }
 }
+
+
+
+// .swiper-container {
+//   width: 100vw;
+//   height: 100vh;
+//   text-align: center;
+//   img {
+//     width: 100%;
+//     height: 100%;
+//   }
+//   p {
+//     font-size: 32px;
+//     font-family: Gill Sans, sans-serif;
+//     font-weight: bold;
+//     text-align: center;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     -webkit-transform: translate(-50%, -100%);
+//     transform: translate(-50%, -100%);
+//   }
+// }
+
+// .swiper-pagination-bullet {
+//   width: 12px;
+//   height: 12px;
+//   opacity: 0.8;
+//   background-color: #DEB666;
+// }
+
+// .swiper-button-next {
+//   color: #DEB666;
+//   font-size: 12px;
+// }
