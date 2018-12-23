@@ -6,7 +6,7 @@
 
         .section_2_left{
             .section_2_box{
-              padding-right: 1.5rem;
+              padding: 1.5rem;
               .section_2_card{
                 background-color: $white;
                 .section_2_gallery{
@@ -57,8 +57,6 @@
           
           .section_2_right{
             .section_2_box{
-              padding-right: 1.5rem;
-              padding-bottom: 1.5rem;
               .section_2_card{
               background-color: $white;
                 .section_2_gallery{

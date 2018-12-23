@@ -10,9 +10,6 @@ html,body{
     width: 100%;
     overflow-x: hidden; 
     font-size: 10px;
-    position: relative;
-      height: 100%;
-    
 }
 
 // 置中容器
@@ -70,7 +67,7 @@ p{
 
 [class*="col-"] {
     float: left;
-    // padding: 1.5rem;
+    padding: 1.5rem;
 }
     
 .col-1 {width: 8.33%;}
@@ -129,12 +126,12 @@ p{
 .title{
     text-align: center;
     color: $title-color;  
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 768px){     
     .title{
-        padding-bottom: 1rem; 
+        padding-bottom: 0; 
     }
 }
 

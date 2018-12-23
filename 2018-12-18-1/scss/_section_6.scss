@@ -1,8 +1,11 @@
 #section_6{  
+    .section_6_padding{
+        // padding-left: 4.5rem;
+        // padding-right: 4.5rem;
+    }
   
     .section_6_card{
         background-color: $white;
-        margin-right: 1.5rem;
       .gallery{
         border: 0.1rem solid $border_light;
         &:hover{
