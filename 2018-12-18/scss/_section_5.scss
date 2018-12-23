@@ -1,0 +1,93 @@
+#section_5{
+    background-color: $bg_gray;
+
+    .section_5_left{
+      .section_5_box{
+        .section_5_card{    
+          .section_5_top{
+            position: relative;
+            img{
+              width: 100%;
+              border-radius: 0.5rem;
+              transform: scale(1);
+              transition: all 0.5s ease-in-out;
+              &:hover{
+                transform: scale(1.05);
+              }
+            }
+            .section_5_price{
+              position: absolute;
+              bottom: 1.5rem;
+              left: 1.5rem;
+              color: $white;       
+              padding: 0.5rem 1rem;
+              font-size: 1.4rem;
+              cursor: pointer;
+              border-radius: 0.1rem;
+              z-index: 120;
+              font-weight: 700;
+              border: none;
+              font-size: 1.6rem;
+            }
+          }        
+        }
+      }
+    }
+    
+    .section_5_right{
+      .section_5_box{
+        .section_5_card{
+          .section_5_top{
+            position: relative;
+            img{
+              width: 100%;
+              border-radius: 0.5rem;
+              transform: scale(1);
+              transition: all 0.5s ease-in-out;
+              &:hover{
+                transform: scale(1.05);
+              }
+            }
+            .section_5_price{
+              position: absolute;
+              bottom: 1.5rem;
+              left: 1.5rem;
+              color: $white;       
+              padding: 0.5rem 1rem;
+              font-size: 1.4rem;
+              cursor: pointer;
+              border-radius: 0.1rem;
+              z-index: 120;
+              font-weight: 700;
+              border: none;
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  
+    .section_5_image{
+        max-height: 14rem;
+    }
+}
+
+.section_5_image_moblie{
+    display: none;
+}
+    
+@media screen and (max-width: 768px){
+    .section_5_left, .section_5_right, .section_5_box {
+    width: 100%;
+    }
+    .section_5_image{
+        display: none;
+    }
+    .section_5_image_moblie{
+        height: 100%; 
+        width: 100%;
+        display: block;
+    }
+}
+  
+  

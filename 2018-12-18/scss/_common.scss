@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// 字體 , 字型 , 寬度
+html,body{
+    font-family: 'Roboto';
+    width: 100%;
+    overflow-x: hidden; 
+    font-size: 10px;
+}
+
+// 置中容器
+.container{
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// 清除浮動
+.clear-fixed{
+    clear: both;
+}
+
+// 顏色
+$p: #858a99;
+$title_color: #606060;
+$gold: #DEB668;
+$white: #fff;
+$black: #000;
+$bg_gray: #F1F0ED;
+$border_light: #ccc;
+$border_dark: #777;
+$border: #EBEAE9;
+$fb_color: #3B5998;
+
+// 自製字型
+h1{
+    font-size: 4rem;
+    color: $title_color;
+    font-weight: 900;
+}
+
+h5{
+    font-size: 1.8rem;
+    color: $title_color;
+    font-weight: 900;
+}
+
+p{
+    color: $p;
+    font-size: 1.6rem;
+}
+
+// 自製網格
+.grid_container{
+    width: 100%;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 1.5rem;
+}
+    
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+// 按鈕統一
+.button{
+    display: inline-block;
+    border-radius: 0.4rem;
+    border: 0.2rem solid $gold;
+    background-color: $white;
+    padding: 1rem 5rem;
+    color: $gold;
+    font-weight: 900;
+    font-size: 1rem;
+    cursor: pointer;
+    &:hover span{
+        padding-right: 2rem;
+        &:after{
+            opacity: 1;
+            right: 0;
+        }
+    }
+    &:hover{
+        background-color: $gold;
+        color: $white;
+    }
+    span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        &::after{
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -1rem;
+            transition: 0.5s;
+        }
+    }
+}
+
+// 標題，針對手機與平版
+.title{
+    text-align: center;
+    color: $title-color;  
+    padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px){     
+    .title{
+        padding-bottom: 0; 
+    }
+}
+
+// 自訂中
+#section_1, #section_2, #section_3, #section_5 ,#section_6 {
+    padding: 10rem 5rem;
+} 
+
+#footer {
+    padding: 3rem 5rem;
+}
+
+#footer_bottom {
+    padding: 0.5rem 5rem;
+}
+
+#top_navbar {
+    padding: 0.1rem 5rem;
+}
+
