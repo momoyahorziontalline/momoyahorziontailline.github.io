@@ -118,19 +118,11 @@
     .title, .section_2_right, .section_2_left, .section_2_box {
       width: 100%;
     }
-    .section_2_left{
-      .section_2_box{
-        padding-bottom: 1.5rem;
-        padding-left: 1.5rem;
-      }
-    }
 
-    .section_2_right{
-      .section_2_box{
-        padding-left: 1.5rem;
-      }
-    }
-    #section_2 .grid_container .section_2_left .section_2_box .section_2_card .section_2_gallery .section_2_bottom {
-      padding: 1rem;
+    #section_2{
+        padding: 3rem 0;
+        .title{
+            padding-bottom: 0; 
+        }
     }
 }

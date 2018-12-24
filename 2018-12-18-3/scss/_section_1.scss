@@ -1,7 +1,7 @@
 #section_1{
 
     .section_1_left{
-        // padding-left: 3rem;
+        padding-left: 3rem;
         line-height: 2rem;        
         p{
             text-align: justify;
@@ -21,16 +21,5 @@
 @media screen and (max-width: 768px){
     .section_1_left, .section_1_right{
       width: 100%;
-    }
-
-    .section_1_left{
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
-
-    .section_1_right{
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
     }
 }
