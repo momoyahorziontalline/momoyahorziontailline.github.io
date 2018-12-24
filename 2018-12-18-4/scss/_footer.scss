@@ -125,26 +125,6 @@
 
 }
 
-/* top */
-.backtop {
-    width: 55px;
-    height: 55px;
-    background-color: #DEB666;
-    border-radius: 2px;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    i{
-        color: #fff;
-        line-height: 30px;
-    }
-    &:hover{
-        background-color: #B69854;
-     }
-}
-
 
 @media screen and (max-width:768px){
     

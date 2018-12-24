@@ -1,47 +1,81 @@
-#section_3{
-
-    .section_3_left{
-        padding-left: 3rem;
-        img{
-            padding-left: 3rem;
-            width: 100%;
-           
-        }
-    }
-
-    .section_3_right{
-        height: 100%;
-        .box{
-            background-color: $white;
-            width: 100%;
-            border: 0.1rem solid $border;
-            margin-bottom: 1rem;
-            .left-box{
-                float: left;
-                margin: 0.8rem;
-                img{
-                    width: 50%;
-                }
-            }
-            .right-box{
-                p{
-                    text-align: justify;
-                    font-size: 1.6rem;
-                }
-            }
-        } 
-    }
-}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
   
-@media screen and (max-width: 768px){
-    .section_3_left, .section_3_right,{
-        width: 100%;
+  .grid_container{
+    width: 100%;
+    display: grid;
+  }
+  
+  /* 開始自製網格 */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+  }
+  
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  /* 結束自製網格 */
+  
+  
+  .container{
+    display: block;       
+    width: 100%;
+    img{
+      width: 100%;
     }
+    .tabs{
+      display:none;
+    }
+    .show{
+      display:block;
+      font-weight: bold;
+    }
+    .section_3_left{
+      padding-right: 15px;
+      padding-left: 15px;
+    } 
+    .section_3_right{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .btn_footer{
+      height: 25%;
+      position: relative;
+      color: #000;
+      border: 1px solid #ccc;
+      letter-spacing: 1px;
+      background-color: inherit;
+      cursor: pointer;
+      transition: all 0.5s;
+      font-size: 12px;
+      padding: 18px 5px;
+      &:hover{
 
-    #section_3{
-        padding: 3rem 0;
-        .title{
-            padding-bottom: 0; 
-        }
+        outline: 5px solid #777;
+      }
     }
-}
+  }
+  
+  @media screen and (max-width: 1018px){
+    .section_3_left, .section_3_right{
+      width: 100%;
+    }
+  }
