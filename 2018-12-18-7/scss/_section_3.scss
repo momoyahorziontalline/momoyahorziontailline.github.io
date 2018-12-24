@@ -1,4 +1,6 @@
 #section_3{
+  // display: block;       
+  // width: 100%;
   img{
     width: 100%;
   }
@@ -27,8 +29,9 @@
     cursor: pointer;
     transition: all 0.5s;
     font-size: 12px;
-    padding: 12px 10px;
+    padding: 18px 5px;
     &:hover{
+
       outline: 5px solid #777;
     }
   }
