@@ -17,22 +17,19 @@
             transform: translate(-50%, -50%);
   }
   
-.swiper-pagination-bullet {
-    width: 1.2rem;
-    height: 1.2rem;
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
     opacity: 0.8;
     background-color: #DEB666;
-    &:active{
-        background-color: rgba(255,255,255,0.5);
-    }
-}
+  }
 
 .swiper-button-next{
     background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23DEB666'%2F%3E%3C%2Fsvg%3E");
     background-color:rgba(255,255,255,1);
     border-radius: 50%;
     padding: 2.5rem;
-    right: 20px;
+    right: 50px;
 }
 
 .swiper-button-next:hover{
@@ -45,7 +42,7 @@
     background-color:rgba(255,255,255,1);
     border-radius: 50%;
     padding: 2.5rem;
-    left: 20px;
+    left: 50px;
 }
 
 .swiper-button-prev:hover{

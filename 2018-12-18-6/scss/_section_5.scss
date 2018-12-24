@@ -78,12 +78,6 @@
 .section_5_image_moblie{
     display: none;
 }
-
-@media screen and (min-width: 1920px){
-  #section_5 .section_5_image {
-    max-height: 25rem;
-  }
-}
     
 @media screen and (max-width: 768px){
     .section_5_left, .section_5_right, .section_5_box {
