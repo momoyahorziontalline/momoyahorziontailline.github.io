@@ -310,14 +310,13 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
-    /* position: fixed; */
     bottom: 0;
-    /* z-index: 999; */
   }
   .footer .footer-text{
     color: #6C7A89;
     font-size: 8px;
     margin-top: 40px;
+    margin-left: -38px;
   }
   
   @media screen and (max-width: 768px) {
