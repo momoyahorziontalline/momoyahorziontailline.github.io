@@ -5,8 +5,8 @@ var list = document.querySelector(".list");
 var data = JSON.parse(localStorage.getItem("mybmi")) || [];
 // 圈圈
 var youresult = document.querySelector('.you-result');
+var yourbtn = document.querySelector(".your-btn");
 var btn = document.querySelector(".btnClass");
-
 
 
 upres(data);
@@ -149,7 +149,7 @@ function btnres(e) {
     youresult.style.display = "block";
     // @ts-ignore
     // 按下去黃色按鈕隱藏
-    btn.style.display = "none";
+    yourbtn.style.display = "none";
     // @ts-ignore
     // 印出外圈bmi值
     document.querySelector(".bmi-result").textContent = bmi;
@@ -196,20 +196,18 @@ function reflesh(e) {
     // console.log("12");
     // @ts-ignore
     // 按下去黃色按鈕顯示
-    btn.style.display = "block";
+    yourbtn.style.display = "block";
     // @ts-ignore
     // 按下去外圈隱藏
     youresult.style.display = "none";
     var resulto = document.querySelector("result");
     //  重新設置樣式(剔除顏色)，按下重新設置css回到最初
-    window.location.reload();
-    // upres(data);
     // 清空輸入框
     // @ts-ignore
     heightClass.value = "";
     // @ts-ignore
     weightClass.value = "";
-    resulto.setAttribute('class', 'result');
+    resulto.setAttribute('class','result');
 }
 
 function upres(items) {
@@ -221,7 +219,7 @@ function upres(items) {
         var height = items[i].HEIGHT;
         var weight = items[i].WEIGHT;
         var status = items[i].status;
-        console.log(status);
+        // console.log(status);
         if (items[i].status == "理想") {
             bmicolor = "green";
         } else if (items[i].status == "過輕") {
