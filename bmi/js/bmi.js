@@ -200,14 +200,15 @@ function reflesh(e) {
     // @ts-ignore
     // 按下去外圈隱藏
     youresult.style.display = "none";
-    var resulto = document.querySelector("result");
-    resulto.setAttribute('class','result');
+  
     //  重新設置樣式(剔除顏色)，按下重新設置css回到最初
     // 清空輸入框
     // @ts-ignore
     heightClass.value = "";
     // @ts-ignore
     weightClass.value = "";  
+    var resulto = document.querySelector("result");
+    resulto.setAttribute('class','result');
 }
 
 function upres(items) {
