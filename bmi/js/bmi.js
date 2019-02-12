@@ -162,23 +162,22 @@ function btnres(e) {
     var result = document.querySelector('.result');
     var StatusColor = "";
     if (bmio.status == "理想") {
-        StatusColor = "color-Health";
-        result.classList.add(StatusColor);
+        result.classList.add("color-Health");
     } else if (bmio.status == "過輕") {
         StatusColor = "color-UnderWeight";
-        result.classList.add(StatusColor);
+        result.classList.add("color-UnderWeight");
     } else if (bmio.status == "過重") {
         StatusColor = "color-OverWeight";
-        result.classList.add(StatusColor);
+        result.classList.add("color-OverWeight");
     } else if (bmio.status == "輕度肥胖") {
         StatusColor = "color-MildObesity";
-        result.classList.add(StatusColor);
+        result.classList.add("color-MildObesity");
     } else if (bmio.status == "中度肥胖") {
         StatusColor = "color-ModerateObesity";
-        result.classList.add(StatusColor);
+        result.classList.add("color-ModerateObesity");
     } else if (bmio.status == "重度肥胖") {
         StatusColor = "color-SevereObesity";
-        result.classList.add(StatusColor);
+        result.classList.add("color-SevereObesity");
     } else {
         alert("錯誤");
     }
