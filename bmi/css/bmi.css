@@ -11,7 +11,6 @@ body {
     margin-right: auto;
     padding-left: 0px;
     padding-right: 40px;
-   
   }
   
   .bmi {
@@ -124,7 +123,7 @@ body {
     -ms-flex-align: center;
     align-items: center;
   }
-  .youresultbtnClass{
+  .your-btn{
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -306,18 +305,22 @@ body {
   
   .footer {
     background: #FFD366;
-    height: 100px;
+    /* height: 100px; */
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-content: center;
     bottom: 0;
+    color: #424242;
+    font-size: 8px;
+    /* margin-left: -38px; */
   }
-  .footer .footer-text{
+  /* .footer .footer-text{
     color: #6C7A89;
     font-size: 8px;
     margin-top: 40px;
     margin-left: -38px;
-  }
+  } */
   
   @media screen and (max-width: 768px) {
     .container {
