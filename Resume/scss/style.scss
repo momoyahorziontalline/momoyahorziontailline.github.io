@@ -134,7 +134,6 @@ body{
     color: $orange;
   }
   .img-fluid-right{
-    height: 100%;
     text-align: right;
   }
   .col-md-8{
@@ -348,6 +347,12 @@ body{
   #header{
     h3.d-inline-block{
       margin-top: 25px;
+    }
+  }
+  #about{
+    .img-fluid-right{
+      text-align: center;
+      width: 100%;
     }
   }
   #experience{
