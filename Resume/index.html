@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Resume | HUANG YA JIE</title>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
@@ -49,7 +49,7 @@
         </nav>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-6 col-lg-4">
+                <div class="col-sm-6 col-lg-6">
                     <div class="card">
                         <img class="card-img-top" src="./img/me.jpg" alt="Card image cap">
                         <div class="card-body" style="padding: 0">
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-8">
+                <div class="col-sm-6 col-lg-6">
                     <br>
                     <br>
                     <div id="typed-strings">
@@ -75,12 +75,12 @@
     <section id="about" class="animated">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <div class="img-block">
+                <div class="col-md-4">
+                    <div class="img-block img-fluid-right">
                         <img src="./img/BeautyPlus_20171118184407_save.jpg" width="250px" class="img-fluid" alt="">
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <h2 class="text-uppercase font-italic border-bottom border-danger d-inline-block pb-3">About me</h2>
                     <p>
                         出生在彰化縣，畢業於朝陽科技大學資訊管理系。
@@ -335,24 +335,6 @@
 
 
             //滾動效果
-            $('a[href^="#"]').on('click', function (e) { //當a href為#開頭的標籤被點擊執行
-                e.preventDefault
-                var target = this.hash; //獲取此a的href
-                var $target = $(target);
-                //Scroll and show hash
-                // $('html,body').animate({
-                // 	'scrollTop': $target.offset().top
-                // },1500,'easeOutExpo',function(){
-                // 	window.location.hash = target;
-                // });
-
-                //Scroll and don't show hash
-                $('html, body').animate({
-                    'scrollTop': $target.offset().top1
-                }, 750, 'easeInOutExpo');
-
-            });
-
             //waypoint+animate
             $('#about').css('visibility', 'hidden')
             $('#about').waypoint(function () {
@@ -369,8 +351,6 @@
             $('.skill-graph').waypoint(function () {
                 $(this).addClass('skill-animation');
             }, { offset: '90%' });
-
-
 
             $('#portfolio').css('visibility', 'hidden')
             $('#portfolio').waypoint(function () {
@@ -399,12 +379,7 @@
             }
         });
 
-        //animate scroll to top
-        $('.backtop').on('click', function () {
-            $('body,html').animate({
-                scrollTop: 0
-            }, 500)
-        });
+        
 
     </script>
 </body>
