@@ -15,6 +15,8 @@ btnArea.addEventListener('click', function (e) {
         // 當下選單的值是否等於苓雅區
         if (btn == data[i].Zone) {
             title = data[i].Zone;
+            selectData.push(data[i]);
+            // console.log(selectData.length);
             str += `<div class="col-6 col-s-12">
             <div class="card">
             <div class="top">
@@ -32,8 +34,6 @@ btnArea.addEventListener('click', function (e) {
             </div>
         </div>
         </div>`
-        // @ts-ignore
-            console.log(e.target.detail/2);
         }
         list.innerHTML = `<h1 class="title">` + title + `</h1>` + str;
     }
@@ -41,6 +41,8 @@ btnArea.addEventListener('click', function (e) {
 });
 
 // 抓下拉選單
+var selectData = [];
+console.log(selectData.length);
 var ka = document.querySelector("#ka");
 ka.addEventListener('change', function (e) {
     // 抓取下拉選單的值target
@@ -48,10 +50,12 @@ ka.addEventListener('change', function (e) {
     var select = e.target.value;
     var str = "";
     var title = "";
-    for (var i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         // 當下選單的值是否等於苓雅區
         if (select == data[i].Zone) {
             title = data[i].Zone;
+            selectData.push(data[i]);
+            // console.log(selectData.length);
             str += `<div class="col-6 col-s-12">
             <div class="card">
             <div class="top">
@@ -98,112 +102,9 @@ for (var i = 0; i < data.length; i++) {
         </div>
     </div>
     </div>`;
-    // @ts-ignore
-        // console.log(e.target.detail/2);
     }
     list.innerHTML = `<h1 class="title">` + title + `</h1>` + str;
 }
-
-// 分頁**********很重要
-// nowPage目前所在頁數位置； pageNum 每頁資料上限
-var pageNum = 4; //每頁資料上限
-var nowPage = 1; //現在所在頁數
-var totalPage; //所有頁數
-var totalInfo; //該區所有資料數
-
-var selectData;
-function pageContent(thisPage){
-    totalInfo = data[i].length; //該區所有資料數
-    var countPage = totalInfo / pageNum;
-
-    // 總共有幾頁
-    totalPage = Math.ceil(countPage); //無條件進位
-
-    // 如果頁數超過1頁 顯示頁數/上一頁/下一頁
-    if(totalPage> 1){
-        // @ts-ignore
-        page.style.display = "block";
-    }else{
-        // @ts-ignore
-        page.style.display = "none";
-    }
-
-    // 當nowPage = 1;
-    var startInfo; //開始顯示資料數
-    var endInfo; //最後顯示的資料數
-    
-    if(thisPage == totalPage){
-        startInfo = (totalPage-1) * pageNum;
-        endInfo = totalInfo;
-    }else{
-        startInfo = (totalPage-1) * pageNum;
-        endInfo = thisPage * pageNum;
-    }
-    var str = "";
-    if(data[i].length == 0){ 
-        return
-    }
-    for (var i=startInfo ;i<endInfo ;i++){
-        str += `<div class="col-6 col-s-12">
-        <div class="card">
-        <div class="top">
-            <img width="463px" src="` + data[i].Picture1 + `" alt="">
-            <p class="ka">` + data[i].Name + `</p>
-            <p class="ka-section">` + data[i].Zone + `</p>
-        </div>
-        <div class="bottom">
-            <p class="text"><i class="far fa-clock fa-clock-time gray"></i>` + data[i].Opentime + `</p>
-            <p class="text"><i class="fas fa-map-marker-alt fa-map-gps orange"></i>`+ data[i].Add + `</p>
-            <div class="p-leftright">
-                <p class="text"><i class="fas fa-mobile-alt fa-mobile ligtblue"></i>`+ data[i].Tel + `</p>
-                <p class="text"><i class="fas fa-tags text-warning orange"></i>`+ data[i].Ticketinfo + `</p>
-            </div>
-        </div>
-    </div>
-    </div>`;
-    }
-    list.innerHTML = `<h1 class="title">` + title + `</h1>` + str;
-
-    nowPage = thisPage;
-    pageContent(totalPage);
-}
-// --------------------------------------- //
-// 顯示頁數
-function pageContent(totalPage){
-    var btnStr ="";
-    for(let i=0; i<totalPage;i++){
-        btnStr += '<button class="btn" data-num="' + (i+1) + '">' + (i+1) + '</button>';
-    }
-    // @ts-ignore
-    page.innerHTML = '<button id="prevBtn" data-add="-1">< prev</button>' + btnStr + '<button id="nextBtn" data-add="1">next ></button>';
-}
-//頁數監聽
-// @ts-ignore
-page.addEventListener("click",pageClick,false);
-
-function pageClick(e){
-  e.preventDefault();
-  if (e.target.localName !== "button"){ return; }
-  var thisPage;
-  var pageAdd = parseInt(e.target.dataset.add);
-
-  if (pageAdd == -1 || pageAdd == 1){   
-    if (pageAdd == -1){
-      if (nowPage + pageAdd < 1){return;}
-      thisPage = nowPage - 1;
-    } else if (pageAdd == 1){
-      if (nowPage + pageAdd > totalPage){return;}
-      thisPage = nowPage + 1;
-    }
-  }else{
-    thisPage = parseInt(e.target.dataset.num);
-    if (nowPage == thisPage){return;}
-  }
-  
-
-  pageContent(thisPage);
-}
-
 
 
 // 回上方
@@ -224,12 +125,5 @@ gototop.addEventListener('click', function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 });
-
-
-
-
-
-
-// 頁數
 
 

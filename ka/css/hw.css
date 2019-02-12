@@ -242,6 +242,31 @@ h1.title{
     padding-top: 20px;
     text-align: center;
 }
+/* 
+ .page {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+ .page button {
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    padding: 2px 5px;
+    margin: 0px 2px;
+  }
+.page button:hover {
+    color: #7DB3D1;
+  }
+ .page #prevBtn {
+    margin-right: 15px;
+  }
+.page #nextBtn {
+    margin-left: 15px;
+  }
+   */
 
 
 
