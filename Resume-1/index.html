@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
 
     <!-- Demo CSS -->
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./scss/style.css">
 
     <!-- Favicon -->
     <link rel="icon" href="./img/2018-11-14-Resume-02.png" type="image/gif" sizes="50x100">
@@ -23,8 +23,8 @@
     <div id="header">
         <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand" href="#header">HUANG YA JIE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon white"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -46,6 +46,17 @@
                     </li>
                 </ul>
             </div>
+            <ul class="list-unstyled list-inline m-0">
+                <!-- <li class="list-inline-item">
+                    <a href="https://www.instagram.com/__0328_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </li> -->
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/momo90030" target="_blank"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/momoyahorziontalline?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+                </li>
+            </ul>
         </nav>
         <div class="container-fluid">
             <div class="row">
@@ -75,23 +86,68 @@
     <section id="about" class="animated">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="img-block">
-                        <img src="./img/BeautyPlus_20171118184407_save.jpg" width="250px" class="img-fluid" alt="">
+                        <img src="./img/BeautyPlus_20171118184407_save.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <h2 class="text-uppercase font-italic border-bottom border-danger d-inline-block pb-3">About me</h2>
-                    <p>
+                    <p id="fp">
                         出生在彰化縣，畢業於朝陽科技大學資訊管理系。
                         <br>
                         <br>
-                        學校專題接觸到了PHP,MySQL等網頁後端語言及HTML,CSS等網頁前端語言，因而產生了興趣，
+                        學校專題接觸到了PHP,MyAQL等網頁後端語言及HTML,CSS等網頁前端語言，因而產生了興趣，
                         希望在未來可以從事相關網站工作。但找工作的過程中跌跌撞撞，發現自己的能力不足，而去參加勞動力發展署中彰投分署所舉辦的課程，在課堂中學習到我<strong>從未學過的東西和解決曾經不足的問題</strong>，對我來說收穫滿滿。
                         <br>
                         <br>
                         我知道不能侷限自己，還有很多我需要學習的，期許自己能在這條學習的路上不斷前進。
                     </p>
+                    <div class="text-center">
+                        <a href="https://momoyahorziontalline.github.io/PDF_Resume_min.pdf" target="_blank">PDF
+                            Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="experience" class="animated">
+        <div class="container">
+            <h1 class="text-center text-uppercase mb-5">
+                <span class="border-bottom border-danger pb-3 font-italic">
+                    Work experience
+                </span>
+            </h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="mt-4 mb-4 text-center">
+                        <span class="pb-3">
+                            京元電子股份有限公司資訊部門
+                        </span>
+                    </h2>
+                    <p class="pt-2">
+                        擔任助理工程師
+                        <br>
+                        大四時想說畢業之後面臨就業問題，因此比別人早到職場開眼界和穩定性，而申請學校舉辦校外實習，很榮幸地進入京元實習。實習過程中學習到<strong>不同的程式語言撰寫、晶圓生產過程、生產線需要工單和訂單製作、與人溝通協調。</strong>
+                        <div class="text-center mb-5">
+                            <a href="http://www.kyec.com.tw/Default.aspx" target="_blank">Website</a>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mt-4 mb-4 text-center">
+                        <span class="pb-3">
+                            朝陽科技大學圖書資訊處網路組
+                        </span>
+                    </h2>
+                    <p class="pt-2">
+                        擔任資訊人員
+                        <br>
+                        榮幸地進入自己的母校服務，因熟悉著學校的一草一木，而剛開始馬上很快地出入狀況。工作內容主要為<strong>校首頁網頁維護與撰寫、擬定公告及公文、BS10012及ISO270001規劃及導入、活動協辦、行政相關等事務。</strong>
+                        <div class="text-center">
+                            <a href="http://www.pmlis.cyut.edu.tw/" target="_blank">Website</a>
+                        </div>
                 </div>
             </div>
         </div>
@@ -99,7 +155,7 @@
     <hr>
     <section id="skills" class="animated">
         <div class="container">
-            <h1 class="text-center text-uppercase">
+            <h1 class="text-center text-uppercase mt-5">
                 <span class="border-bottom border-danger pb-3 font-italic">
                     Skills
                 </span>
@@ -107,7 +163,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <div id="skill" class="mt-6 animated">
+                <div id="skill" class="mt-5 animated">
                     <div class="skill-container">
                         <div class="skill-graph skill-Illustrator"></div>
                         <p>Illustrator</p>
@@ -137,7 +193,7 @@
     </section>
     <section id="portfolio" class="animated">
         <div class="container">
-            <h1 class="text-center text-uppercase mb-5">
+            <h1 class="text-center text-uppercase mt-5 mb-5">
                 <span class="border-bottom border-danger pb-3 font-italic">
                     portfolio
                 </span>
@@ -145,60 +201,11 @@
             <div class="row">
                 <div class="col-sm-5">
                     <div class="div-border">
-                        <img src="./img/resume.PNG" width="150px" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-sm-7">
-                    <h3 class="text-normal">作品集(平面) - 個人規劃設計</h3>
-                    <ul class="list-unstyled m-0 pt-2 pb-2">
-                        <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>Illustrator設計</li>
-                        <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>Photoshop修圖</li>
-                        <li class="pt-2"><a href="https://momoyahorziontalline.github.io/PDF_Resume_min.pdf" class="bt"
-                                target="blank">LINK</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="div-border">
-                        <img src="./img/ka.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-sm-7">
-                    <h3 class="text-normal">簡易高雄旅遊網(前端頁面) - 個人規劃設計</h3>
-                    <ul class="list-unstyled m-0 pt-2 pb-2">
-                        <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>手刻響應式網頁版型</li>
-                        <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>運用Javascript - JSON</li>
-                        <li class="pt-2"><a href="https://momoyahorziontalline.github.io/ka/" class="bt"
-                                target="blank">LINK</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="div-border">
-                        <img src="./img/bmi.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-sm-7">
-                    <h3 class="text-normal">BMI計算(前端頁面) - 個人規劃設計</h3>
-                    <ul class="list-unstyled m-0 pt-2 pb-2">
-                        <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>手刻響應式網頁版型</li>
-                        <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>運用Javascript - localStorage</li>
-                        <li class="pt-2"><a href="https://momoyahorziontalline.github.io/bmi/" class="bt"
-                                target="blank">LINK</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="div-border">
                         <img src="./img/2019-01-01.png" alt="" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-sm-7">
-                    <h3 class="text-normal">Hotel Zante仿造飯店網站(前端頁面) - 個人規劃設計</h3>
+                    <h3 class="text-normal">Hotel Zante仿造飯店網站(前端頁面) - 個人</h3>
                     <ul class="list-unstyled m-0 pt-2 pb-2">
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>仿造飯店網站</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>手刻 + SCSS 響應式網頁版型</li>
@@ -215,13 +222,12 @@
                     </div>
                 </div>
                 <div class="col-sm-7">
-                    <h3 class="text-normal">Lovely Bear(前端頁面) - 個人規劃設計</h3>
+                    <h3 class="text-normal">Lovely Bear(前端頁面) - 個人</h3>
                     <ul class="list-unstyled m-0 pt-2 pb-2">
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>設計模擬一般電商網站</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>Bootstrap4 + SCSS 規畫響應式網頁版型</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>運用Javascript、jQuery撰寫而成</li>
-                        <li class="pt-2"><a href="https://momoyahorziontalline.github.io/LovelyBear/" class="bt"
-                                target="blank">LINK</a></li>
+                        <li class="pt-2"><a href="https://momoyahorziontalline.github.io/LovelyBear/" class="bt" target="blank">LINK</a></li>
                     </ul>
                 </div>
             </div>
@@ -232,39 +238,12 @@
                     </div>
                 </div>
                 <div class="col-sm-7">
-                    <h3 class="text-normal">初米咖啡 ChooseMe(前端頁面) - 課程團體合作</h3>
+                    <h3 class="text-normal">初米咖啡 ChooseMe(前端頁面) - 團體</h3>
                     <ul class="list-unstyled m-0 pt-2 pb-2">
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>設計模擬一般餐廳網站</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>Bootstrap4 + SCSS 規畫響應式網頁版型</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>運用Javascript、jQuery撰寫而成</li>
-                        <li class="pt-2"><a href="https://choosemecafe.github.io" class="bt" target="blank">LINK</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="div-border">
-                        <img src="./img/newyear.gif" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-sm-7">
-                    <h3 class="text-normal">簡易小遊戲(前端頁面) - 個人規劃設計</h3>
-                    <ul class="list-unstyled m-0 pt-2 pb-2">
-                        <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>Illustrator設計+Photoshop修圖</li>
-
-                        <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>運用Javascrip</li>
-                        <li class="pt-2"><a href="https://momoyahorziontalline.github.io/game/nweyear/" class="bt"
-                                target="blank">財神到 LINK</a>
-                        </li>
-                        <li class="pt-2">
-                            <a href="https://momoyahorziontalline.github.io/game/santa/" class="bt" target="blank">聖誕老人
-                                LINK</a>
-                        </li>
-                        <li class="pt-2">
-                            <a href="https://momoyahorziontalline.github.io/game/tank/" class="bt" target="blank">神射手
-                                LINK</a>
-                        </li>
+                        <li class="pt-2"><a href="https://choosemecafe.github.io" class="bt" target="blank">LINK</a></li>
                     </ul>
                 </div>
             </div>
@@ -275,14 +254,14 @@
                     </div>
                 </div>
                 <div class="col-sm-7">
-                    <h3 class="text-normal">iCUP人力素質提升系統(前後端頁面)-大學專題</h3>
+                    <h3 class="text-normal">iCUP人力素質提升系統(前後端頁面)</h3>
                     <ul class="list-unstyled m-0 pt-2 pb-2">
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>設計模擬一般人力銀行網站</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>樣板套用+Bootstrap規畫響應式網頁版型</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>使用資料庫MySQL</li>
                         <li class="mb-3"><i class="fas fa-minus mr-2"></i></i>運用PHP撰寫而成</li>
-                        <li class="pt-2"><a href="https://www.youtube.com/watch?v=-lkKLcjsKMk&feature=youtu.be"
-                                class="bt" target="blank">LINK</a></li>
+                        <li class="pt-2"><a href="https://www.youtube.com/watch?v=-lkKLcjsKMk&feature=youtu.be" class="bt"
+                                target="blank">LINK</a></li>
                     </ul>
                 </div>
             </div>
@@ -296,9 +275,23 @@
                 </span>
             </h1>
             <p class="font-italic text-center mb-2">Thank your reading.</p>
+            <p class="font-italic text-center mb-2">Please contact me.</p>
             <div class="row text-center">
                 <div class="col-12 phone-wrapper">
-                    <i class="fas fa-phone"></i> 0988-925-973
+                    <p><i class="fas fa-phone"></i> 0988-925-973</p>
+                </div>
+                <div class="col text-uppercase">
+                    <div>
+                        <a href="https://www.facebook.com/momo90030" target="_blank">
+                            <i class="fab fa-facebook"></i>facebook
+                        </a>
+                        <a href="mailto:momo900@gmail.com" target="_blank">
+                            <i class="far fa-envelope"></i>email
+                        </a>
+                        <a href="https://github.com/momoyahorziontalline?tab=repositories" target="_blank">
+                            <i class="fab fa-github-square"></i>github
+                        </a>
+                    </div>
                 </div>
             </div>
     </section>
