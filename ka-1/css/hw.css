@@ -153,13 +153,10 @@ body{
 
 
 /* 分頁 */
-.content{
-  padding: 50px;
-  padding-top: 120px;
-  padding-bottom: 35px;
+.list{
+    margin: 80px 180px;
 }
-
-.title{
+h1.title{
     text-align: center;
     font-size: 30px;
 }
@@ -215,38 +212,6 @@ body{
     display: flex;
     justify-content: space-between;
 }
-/* 頁數 */
-.content .page {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-}
-.content .page button {
-    outline: none;
-    cursor: pointer;
-    background-color: transparent;
-    border: 1px solid #36383F;
-    font-weight: bold;
-    padding: 2px 5px;
-    margin: 0px 2px;
-} 
-.content .page button:hover {
-    color: #0158C0;
-}
-.content .page button.active {
-    background: #0158C0;
-    color: #fff;
-}
-.content .page .prevBtn {
-    margin-right: 15px;
-}
-.content .page .nextBtn {
-    margin-left: 15px;
-} 
-/* 無相關資料 */
-.noInfo{
-    text-align: center;
-}
 
 
 /* gototop */
@@ -277,7 +242,34 @@ body{
     padding-top: 20px;
     text-align: center;
 }
- 
+/* 
+ .page {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+ .page button {
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    padding: 2px 5px;
+    margin: 0px 2px;
+  }
+.page button:hover {
+    color: #7DB3D1;
+  }
+ .page #prevBtn {
+    margin-right: 15px;
+  }
+.page #nextBtn {
+    margin-left: 15px;
+  }
+   */
+
+
+
 
 @media screen and (max-width: 768px) {
     .info-block{
@@ -291,13 +283,8 @@ body{
         width: 200px;
     }
     /* 分頁 */
-    .content{
-        padding: 0px;
-        padding-top: 70px;
-        padding-bottom: 20px;
-    }
-    p{
-        font-size: 14px;
+    .list{
+        margin: 70px auto;
     }
    
    
@@ -307,10 +294,8 @@ body{
         width: calc(100% / 2);
         float: left;
     }
-    .content{
-        padding: 0px;
-        padding-top: 100px;
-        padding-bottom: 20px;
+    .list{
+        margin: 90px auto;
     }
 }
 @media screen and (max-width: 320px) {
