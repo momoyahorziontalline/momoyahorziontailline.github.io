@@ -78,16 +78,12 @@ body{
 .info img{
     width: 100%;
 }
-.info .info-titile{
+.info-titile{
     position: absolute;
     top: 145px;
     color: #fff;
     font-size: 40px;
     padding: 20px;
-}
-.info .info-titile a{
-    color: #fff;
-    text-decoration: none;
 }
 /* 下拉選單 */
  .info-select{
@@ -158,7 +154,7 @@ body{
 
 /* 分頁 */
 .content{
-  padding: 150px;
+  padding: 50px;
   padding-top: 120px;
   padding-bottom: 35px;
 }
@@ -225,10 +221,6 @@ body{
     text-align: center;
     margin-top: 20px;
 }
-.content .pageAll {
-    text-align: center;
-    margin-top: 20px;
-}
 .content .page button {
     outline: none;
     cursor: pointer;
@@ -238,23 +230,10 @@ body{
     padding: 2px 5px;
     margin: 0px 2px;
 } 
-.pageAll button {
-    outline: none;
-    cursor: pointer;
-    background-color: transparent;
-    border: 1px solid #36383F;
-    font-weight: bold;
-    padding: 2px 5px;
-    margin: 0px 2px;
-}
 .content .page button:hover {
     color: #0158C0;
 }
 .content .page button.active {
-    background: #0158C0;
-    color: #fff;
-}
-.content .pageAll button.active {
     background: #0158C0;
     color: #fff;
 }
