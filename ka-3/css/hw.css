@@ -1,0 +1,341 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft JhengHei;
+}
+
+body{
+    background: #F7F7F7;
+}
+    
+
+.container{
+    width: 100%;
+}
+  
+/* 開始自製網格 */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+  
+@media screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+/* 手機 */
+@media only screen and (max-width: 520px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+/* 結束自製網格 */
+  
+.clearfix{
+    clear: both;
+}
+
+
+
+/* 內容 */
+.info{
+    background: url("../img/Hero.png");
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+}
+.info img{
+    width: 100%;
+}
+.info .info-titile{
+    position: absolute;
+    top: 145px;
+    color: #fff;
+    font-size: 40px;
+    padding: 20px;
+}
+.info .info-titile a{
+    color: #fff;
+    text-decoration: none;
+}
+/* 下拉選單 */
+ .info-select{
+    padding: 20px;
+}
+.info-select select{
+    width: 300px;
+    border: 2px solid #fff;
+    background: rgba(255,255,255,0.5);
+    padding: 10px;
+    font-size: 18px;
+}
+.info-block{
+    width: 75%;
+    background: #fff; 
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: -450px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+.info-block .info-hottitle{
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.info-block .info-btn{
+    width: calc(100% / 4 - 5px);
+    float: left;
+}
+.info-block input{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+.info-block input:hover{
+    background: #eee;
+    color: #000;
+}
+.purple{
+    background: #8A82CC;
+}
+.pink{
+    background: #FFA782;
+}
+.blue{
+    background: #559AC8;
+}
+.yellow{
+    background: #F5D005;
+}
+.btn-content .btn{
+    color: #fff;
+    padding: 20px 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-content .btn:hover{
+    background: #bbb;
+}
+
+
+
+/* 分頁 */
+.content{
+  padding: 150px;
+  padding-top: 120px;
+  padding-bottom: 35px;
+}
+
+.title{
+    text-align: center;
+    font-size: 30px;
+}
+.card{
+    border: 1px solid #DFDFDF;
+}
+.card .top{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.card .top img{
+    width: 100%;
+    height: 250px;
+}
+.card .top p.ka{
+    position: absolute;
+    color: #fff;
+    margin: auto;
+    bottom: 10px;
+    left: 25px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.card .top p.ka-section{
+    position: absolute;
+    color: #fff;
+    margin: auto;
+    bottom: 10px;
+    right: 25px;
+    font-weight: 800;
+}
+.card .bottom{
+    padding: 20px;
+    background: #fff;
+}
+.card .bottom .text{
+    padding: 5px;
+}
+.card .bottom .text i{
+   padding-right: 10px;
+}
+.card .gray{
+    color: #8A82CC;
+}
+.card .orange{
+    color: #FFA500;
+}
+.card .ligtblue{
+    color: #559AC8;
+}
+.card .p-leftright{
+    display: flex;
+    justify-content: space-between;
+}
+/* 頁數 */
+.content .page {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+.content .pageAll {
+    text-align: center;
+    margin-top: 20px;
+}
+.content .page button {
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #36383F;
+    font-weight: bold;
+    padding: 2px 5px;
+    margin: 0px 2px;
+} 
+.pageAll button {
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #36383F;
+    font-weight: bold;
+    padding: 2px 5px;
+    margin: 0px 2px;
+}
+.content .page button:hover {
+    color: #0158C0;
+}
+.content .page button.active {
+    background: #0158C0;
+    color: #fff;
+}
+.content .pageAll button.active {
+    background: #0158C0;
+    color: #fff;
+}
+.content .page .prevBtn {
+    margin-right: 15px;
+}
+.content .page .nextBtn {
+    margin-left: 15px;
+} 
+/* 無相關資料 */
+.noInfo{
+    text-align: center;
+}
+
+
+/* gototop */
+.gototop{
+    position: fixed;
+    z-index: 999;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* 頁尾 */
+.footer{
+    background: #0158C0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+}
+.footer-ka{
+    color: #fff;
+    text-align: center;
+}
+.footer-kadata{
+    color: #F5D005;
+    padding-top: 20px;
+    text-align: center;
+}
+ 
+
+@media screen and (max-width: 768px) {
+    .info-block{
+        width: 100%;
+        margin-bottom: -400px;
+    }
+    .info-btn {
+        width: 100%;
+    }
+    .info .info-select select{
+        width: 200px;
+    }
+    /* 分頁 */
+    .content{
+        padding: 0px;
+        padding-top: 70px;
+        padding-bottom: 20px;
+    }
+    p{
+        font-size: 14px;
+    }
+   
+   
+} 
+@media screen and (max-width: 520px) {
+    .info-block .info-btn{
+        width: calc(100% / 2);
+        float: left;
+    }
+    .content{
+        padding: 0px;
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width: 320px) {
+    p{
+        font-size: 14px;
+    }
+}
