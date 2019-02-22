@@ -7,13 +7,13 @@ var data = JSON.parse(localStorage.getItem("mybmi")) || [];
 var youresult = document.querySelector('.you-result');
 var yourbtn = document.querySelector(".your-btn");
 var btn = document.querySelector(".btnClass");
-// 性別，抓name
-var sex = document.getElementsByName("sex");
-// var len = sex.length;
+
 
 upres(data);
 // @ts-ignore
 youresult.style.display = "none";
+
+
 
 //設定時間
 var d = new Date();
@@ -33,6 +33,8 @@ month[10] = "11"
 month[11] = "12"
 var datares = d.getFullYear() + "-" + month[d.getMonth()] + "-" + d.getDate();
 
+
+
 //判斷值不可為空值
 heightClass.addEventListener('blur', function (e) {
     // @ts-ignore
@@ -48,11 +50,20 @@ weightClass.addEventListener('blur', function (e) {
 });
 
 
+
 //綁定監聽
 btn.addEventListener('click', btnres);
 list.addEventListener('click', delres);
 upres(data);
 
+
+//若無任何一個值的話
+window.onload = a;
+function a() {
+    if (data == "") {
+        list.innerHTML = `<div class="text">` + "無任何紀錄" + `</div>`;
+    }
+}
 
 //按鈕新增身高、體重
 function btnres(e) {
@@ -61,19 +72,11 @@ function btnres(e) {
     var height = heightClass.value;
     // @ts-ignore
     var weight = weightClass.value;
-    // 狀態
     var status = "";
-
-    // 選項
-    // @ts-ignore
-    for (var i = 0; i < sex.length; i++) {
-        // @ts-ignore
-        if (sex[i].checked) {
-            // @ts-ignore
-            var sextext = sex[i].value;
-        }
+    if (height == "" || weight == "") {
+        alert("請輸入值");
+        return
     }
-
     //計算BMI
     var bmi = Math.floor((weight / Math.pow(height, 2) * 10000) * 10) / 10;
     //設定一個物件
@@ -82,8 +85,7 @@ function btnres(e) {
         DATE: datares,
         HEIGHT: height,
         WEIGHT: weight,
-        status: "",
-        sex: sextext
+        status: ""
     };
 
     // 如果bmi等於區間裡面的值，狀態從空物件轉成有值，用localStorage存入瀏覽器
@@ -92,13 +94,14 @@ function btnres(e) {
         alert('請輸入身高與體重！');
         return;
     } else {
-        if (bmi >= 18.5 && bmi < 25) {
+        if (bmi >= 18.5 && bmi < 24) {
             bmio.status = "理想";
             //把值(物件)加到取值裡
             data.push(bmio);
             upres(data);
             localStorage.setItem("mybmi", JSON.stringify(data));
             alert("已輸入值");
+
         } else if (bmi < 18.5) {
             bmio.status = "過輕";
             //把值(物件)加到取值裡
@@ -106,28 +109,28 @@ function btnres(e) {
             upres(data);
             localStorage.setItem("mybmi", JSON.stringify(data));
             alert("已輸入值");
-        } else if (bmi >= 25 && bmi < 30) {
+        } else if (bmi >= 24 && bmi < 27) {
             bmio.status = "過重";
             //把值(物件)加到取值裡
             data.push(bmio);
             upres(data);
             localStorage.setItem("mybmi", JSON.stringify(data));
             alert("已輸入值");
-        } else if (bmi >= 30 && bmi < 35) {
+        } else if (bmi >= 27 && bmi < 30) {
             bmio.status = "輕度肥胖";
             //把值(物件)加到取值裡
             data.push(bmio);
             upres(data);
             localStorage.setItem("mybmi", JSON.stringify(data));
             alert("已輸入值");
-        } else if (bmi >= 35 && bmi < 40) {
+        } else if (bmi >= 30 && bmi < 35) {
             bmio.status = "中度肥胖";
             //把值(物件)加到取值裡
             data.push(bmio);
             upres(data);
             localStorage.setItem("mybmi", JSON.stringify(data));
             alert("已輸入值");
-        } else if (bmi > 40) {
+        } else if (bmi > 40){
             bmio.status = "重度肥胖";
             //把值(物件)加到取值裡
             data.push(bmio);
@@ -135,9 +138,11 @@ function btnres(e) {
             localStorage.setItem("mybmi", JSON.stringify(data));
             alert("已輸入值");
         } else {
-            console.log('failed');
+            // 無
         }
     }
+
+
 
     // @ts-ignore
     // 按下去外圈顯示
@@ -156,25 +161,23 @@ function btnres(e) {
     // 外圈顏色設定
     var result = document.querySelector('.result');
     var StatusColor = "";
-    if (bmio.status == "理想") { //18.5-24
-        StatusColor = "color-Health";
-        result.classList.add(StatusColor);
-        console.log(result.getAttribute('class'));
-    } else if (bmio.status == "過輕") {  //18.5
+    if (bmio.status == "理想") {
+        result.classList.add("color-Health");
+    } else if (bmio.status == "過輕") {
         StatusColor = "color-UnderWeight";
-        result.classList.add(StatusColor);
-    } else if (bmio.status == "過重") {  //24-27
+        result.classList.add("color-UnderWeight");
+    } else if (bmio.status == "過重") {
         StatusColor = "color-OverWeight";
-        result.classList.add(StatusColor);
-    } else if (bmio.status == "輕度肥胖") {  //27-30
+        result.classList.add("color-OverWeight");
+    } else if (bmio.status == "輕度肥胖") {
         StatusColor = "color-MildObesity";
-        result.classList.add(StatusColor);
-    } else if (bmio.status == "中度肥胖") {  //30-35
+        result.classList.add("color-MildObesity");
+    } else if (bmio.status == "中度肥胖") {
         StatusColor = "color-ModerateObesity";
-        result.classList.add(StatusColor);
-    } else if (bmio.status == "重度肥胖") {  //40
+        result.classList.add("color-ModerateObesity");
+    } else if (bmio.status == "重度肥胖") {
         StatusColor = "color-SevereObesity";
-        result.classList.add(StatusColor);
+        result.classList.add("color-SevereObesity");
     } else {
         alert("錯誤");
     }
@@ -196,14 +199,15 @@ function reflesh(e) {
     // @ts-ignore
     // 按下去外圈隱藏
     youresult.style.display = "none";
+  
+    //  重新設置樣式(剔除顏色)，按下重新設置css回到最初
     // 清空輸入框
     // @ts-ignore
     heightClass.value = "";
     // @ts-ignore
-    weightClass.value = "";
-    //  重新設置樣式(剔除顏色)，按下重新設置css回到最初
-    var resulto = document.querySelector(".result");
-    resulto.setAttribute('class', 'result');
+    weightClass.value = "";  
+    var resulto = document.querySelector("result");
+    resulto.setAttribute('class','result');
 }
 
 function upres(items) {
@@ -215,7 +219,6 @@ function upres(items) {
         var height = items[i].HEIGHT;
         var weight = items[i].WEIGHT;
         var status = items[i].status;
-        var sex = items[i].sex;
         // console.log(status);
         if (items[i].status == "理想") {
             bmicolor = "green";
@@ -230,11 +233,12 @@ function upres(items) {
         } else if (items[i].status == "重度肥胖") {
             bmicolor = "red";
         }
-        str += '<li class="table-row ' + bmicolor + '"><div class="col col-3" data-label="狀態 (Status)">' + status + '</div><div class="col col-3" data-label="性別 (Sex)">' + sex + '</div><div class="col col-1" id="hiddenClass">BMI</div><div class="col col-4" data-label="BMI">' + bmi + '</div><div class="col col-1" id="hiddenClass" data-label="">height</div><div class="col col-4" data-label="身高 (Height)">' + height + 'cm </div><div class="col col-1" id="hiddenClass">weight</div><div class="col col-4" data-label="體重 (Weight)"> ' + weight + 'kg </div><div class="col col-2" data-label="日期 (Date)"> ' + d + '</div><div class="col col-5" ><div><a class="delClass" id="hiddenClass" href="#" data-index="' + i + '">刪除</a></div></div><div class="btnMobile"><div><a class="delClass" href="#" data-index=" ' + i + ' ">刪除</a></div></div></li>';
+        str += '<li class="table-row ' + bmicolor + '"><div class="col col-3" data-label="狀態 (Status)">' + status + '</div><div class="col col-1" id="hiddenClass">BMI</div><div class="col col-4" data-label="BMI">' + bmi + '</div><div class="col col-1" id="hiddenClass" data-label="">height</div><div class="col col-4" data-label="身高 (Height)">' + height + 'cm </div><div class="col col-1" id="hiddenClass">weight</div><div class="col col-4" data-label="體重 (Weight)"> ' + weight + 'kg </div><div class="col col-2" data-label="日期 (Date)"> ' + d + '</div><div class="col col-5" ><div><a class="delClass" id="hiddenClass" href="#" data-index="' + i + '">刪除</a></div></div><div class="btnMobile"><div><a class="delClass" href="#" data-index=" ' + i + ' ">刪除</a></div></div></li>';
     }
 
     list.innerHTML = str;
 }
+
 
 //刪除資料的方法
 function delres(e) {
@@ -248,12 +252,11 @@ function delres(e) {
 
     //宣告index為data-index的值
     var index = e.target.dataset.index;
-    // console.log(index);
+    console.log(index);
     data.splice(index, 1);
-
+    window.location.reload();
+    upres(data);
     //將BMIdata轉文字儲存進localStorage之中,並設定名稱是BMIdataList
     localStorage.setItem('mybmi', JSON.stringify(data));
-
-    upres(data);
 };
 
