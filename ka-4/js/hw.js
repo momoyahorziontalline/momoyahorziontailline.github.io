@@ -5,17 +5,11 @@ xhr.open('get', 'https://data.kcg.gov.tw/api/action/datastore_search?resource_id
 xhr.send(null);
 // 因為非同步，用onload取值
 xhr.onload = function () {
-
-// status判斷回傳來的"資料"是否正確 //防呆
-    if (xhr.status == 200 && xhr.readyState == 4) {
-        // 字串轉陣列
-        var str = JSON.parse(xhr.responseText);
-        xhrdata = str.result.records; //result.records用來對應json位置
-        pageContentAll(1);
-    }else{
-        alert("資料錯誤!!");
-    }
-
+    // 字串轉陣列
+    var str = JSON.parse(xhr.responseText);
+    xhrdata = str.result.records; //result.records用來對應json位置
+    pageContentAll(1);
+   
 }
 
 var nowPageAll = 1; //現在所在頁數
@@ -218,7 +212,7 @@ console.log(selectData);
 function pageContent(thisPage) {   //*2  //*6
     console.log(thisPage);
     totalInfo = selectData.length; //該區所有資料數
-
+    
     console.log(totalInfo); //剛剛把符合標題的值加到selectData參數裡
     var counPage = totalInfo / pageNum;
 
