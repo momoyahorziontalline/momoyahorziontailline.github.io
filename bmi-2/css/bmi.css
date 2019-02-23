@@ -139,12 +139,11 @@ body {
     text-align: center;
 }
 .radio-custom:checked + .radio-custom-label:before {
-    content: '✔';
+    content: "\f00c";
     font-family: 'FontAwesome';
     background: #555555;
     color: #FFD366;
     font-size: 12px;
-    line-height: 12px; 
 }
 .radio-custom + .radio-custom-label:before {
     border-radius: 50%;
