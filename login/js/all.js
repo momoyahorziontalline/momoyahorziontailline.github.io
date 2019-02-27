@@ -169,9 +169,6 @@ function loginres(e) {
             if (data.message == "登入成功") {
                 listin.innerHTML = '<div class="listcolor">登入成功！！</div>';
                 // alert('登入成功！！');
-            } else if (data.message == "此帳號已被使用") {
-                listin.innerHTML = '<div class="listcolor">此帳號已被使用！！</div>';
-                // alert('此帳號已被使用！！');
             } else {
                 listin.innerHTML = '<div class="listcolor">此帳號不存在或帳號密碼錯誤！！</div>';
                 // alert('此帳號不存在或帳號密碼錯誤！！');
