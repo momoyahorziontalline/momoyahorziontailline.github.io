@@ -151,7 +151,7 @@ function loginres(e) {
 
     // ajax
     var xhr = new XMLHttpRequest();
-    xhr.open('post', 'https://hexschool-tutorial.herokuapp.com/api/signup', true);
+    xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signin', true);
     // 告訴伺服器 格式為 JSON 格式
     xhr.setRequestHeader("Content-type", "application/json");
     // 將 str 轉為字串
