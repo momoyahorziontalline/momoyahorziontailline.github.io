@@ -1,0 +1,45 @@
+#subscribe{
+    background: $subscribe;
+    padding: 150px 0px;
+    text-align: center;
+    // 標題
+    .title{
+      color:#2A3129;
+      font-weight: 600;
+    }
+    p{
+        letter-spacing: 2px;
+        padding-top: 20px;
+    }
+    .youremail{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        input{
+            border: 2px solid $white;
+            padding: 15px;
+            padding-top: 20px;
+            width: 30%;
+            background: rgba(255, 255, 255, 0.5);
+        }
+    }
+    .btn{
+        border: 2px solid $itemcolor;
+        padding: 15px 30px;
+        color: $itemcolor;
+        letter-spacing: 5px;
+        background: transparent;
+        cursor: pointer;
+        &:hover{
+            background: $maincolor;
+            color: $white;
+            border: 2px solid $maincolor;
+            transition: all 0.3s ease;
+        }
+    }
+   
+}
+@media screen and (max-width: 520px){
+    #subscribe .youremail input{ 
+        width: 80%;  
+    }
+}

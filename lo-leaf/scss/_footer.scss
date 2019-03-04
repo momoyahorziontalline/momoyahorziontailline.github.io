@@ -1,0 +1,126 @@
+#footer{
+  background: $white;
+  padding: 100px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .right{
+    display: inline-block;
+    margin-left: 50px;
+    a{
+      color:#fff;
+      background: $itemcolor;
+      border-radius: 4px;
+      text-align: center;
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      padding-top: 6px;
+      margin: 0 2px;
+      transition: all .5s;
+       -webkit-font-smoothing: antialiased;
+      border-radius: 50%;
+      &:hover{
+        background: $maincolor;
+        span{
+          bottom:50px;
+          visibility:visible;
+          opacity:1;
+        }
+      }
+      span{
+        color: $white;
+        position: absolute;
+        bottom: 0;
+        left: -25px;
+        right: -25px;
+        padding: 5px 7px;
+        z-index: -1;
+        font-size: 14px;
+        border-radius: 2px;
+        background: $maincolor;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        &:before{
+          content:'';
+          width: 0; 
+          height: 0; 
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid $maincolor;
+          position: absolute;
+          bottom: -5px;
+          left: 40px;
+        }
+      }
+    }
+  }
+  .left{
+      ul{
+          li{
+              display: inline-block;
+              margin-right: 50px;
+              &:not(:first-child) {
+                  margin-left: 15px;
+              }
+              a{
+                  display: inline-block;
+                  outline: none;
+                  color: $maincolor;
+                  font-size: 16px;
+                  text-decoration: none;
+                  letter-spacing: 2px;
+              }
+          }
+      }
+  }
+}
+
+/* top */
+.backtop {
+  width: 40px;
+  height: 40px;
+  background-color: $itemcolor;
+  border-radius: 2px;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  i{
+      color: #fff;
+      line-height: 8px;
+  }
+  &:hover{
+      background-color: $maincolor;
+   }
+}
+
+@media screen and (max-width: 520px){
+  #footer{
+      flex-direction: column-reverse;
+      padding: 50px 0;
+  }
+  #footer .left ul li{
+      display: flex;
+      justify-content: center;
+      margin-right: 0px;
+      padding: 10px;
+  }
+  #footer .left ul li:not(:first-child){
+    margin-left: 0px;
+  }
+  #footer .right{
+      display: flex;
+      justify-content: center;
+      margin-left: 0px;
+      padding: 20px 0;
+      
+  }
+}
+
+
+
