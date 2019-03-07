@@ -155,9 +155,11 @@ body{
 }
 
 
+
 /* 分頁 */
 .content{
-  padding: 10px 150px;
+  padding: 150px;
+  padding-top: 120px;
   padding-bottom: 35px;
 }
 
@@ -296,13 +298,6 @@ body{
     padding-top: 20px;
     text-align: center;
 }
-
-
-#map{
-    width: 70%;
-    height: 350px;
-    margin: 100px auto 10px auto;
-}
  
 
 @media screen and (max-width: 768px) {
@@ -335,11 +330,8 @@ body{
     }
     .content{
         padding: 0px;
-        padding-top: 20px;
+        padding-top: 100px;
         padding-bottom: 20px;
-    }
-    #map{
-        width: 100%;
     }
 }
 @media screen and (max-width: 320px) {

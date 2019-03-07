@@ -6,17 +6,16 @@ xhr.send(null);
 // 因為非同步，用onload取值
 xhr.onload = function () {
 
-    // status判斷回傳來的"資料"是否正確 //防呆
+// status判斷回傳來的"資料"是否正確 //防呆
     if (xhr.status == 200 && xhr.readyState == 4) {
-        console.log("成功");
         // 字串轉陣列
         var str = JSON.parse(xhr.responseText);
         xhrdata = str.result.records; //result.records用來對應json位置
         pageContentAll(1);
-    } else {
+    }else{
         alert("資料錯誤!!");
     }
-    
+
 }
 
 var nowPageAll = 1; //現在所在頁數
@@ -134,8 +133,6 @@ function pageClickAll(e) {
 }
 
 
-
-
 // ************非常重要，針對按鈕與下拉選單**************** //
 // ************非常重要，針對按鈕與下拉選單**************** //
 // ************非常重要，針對按鈕與下拉選單**************** //
@@ -162,7 +159,6 @@ btnArea.addEventListener('click', btnaa, false);
 function kaselect(e) {
     var title = e.target.value;
     console.log(title);
-    initMap();
     abc(title);
     pageContent(1);  // 目前頁數  //*1
 }
@@ -175,14 +171,13 @@ function btnaa(e) {
     ka.value = ckeckStr;
     // @ts-ignore
     console.log(ckeckStr);
-    initMap();
     abc(ckeckStr);
     pageContent(1);
+
 }
 
 // --------------------------------------- //
 // 下拉選單與按鈕相戶對應，找出同一區的景點，text 是選擇的區域名
-// @ts-ignore
 var selectData;
 function abc(text) {
     console.log(text);
@@ -199,10 +194,6 @@ function abc(text) {
             document.querySelector(".title").textContent = text;
         }
     }
-
-    // 清除
-    findData(selectData);
-
     // 符合狀況2
     if (selectData.length == 0) {
         document.querySelector(".noInfo").textContent = "無相關資料";
@@ -223,6 +214,7 @@ var nowPage = 1; //現在所在頁數
 var totalPage; //所有頁數
 var totalInfo; //該區所有資料數(筆)
 
+console.log(selectData);
 function pageContent(thisPage) {   //*2  //*6
     console.log(thisPage);
     totalInfo = selectData.length; //該區所有資料數
@@ -344,241 +336,6 @@ function pageClick(e) {
         }
     }
 }
-
-// --------------------------------------- //
-
-// MAP
-var map;
-function initMap() {
-    
-    // 設定地圖中心
-    // @ts-ignore
-    map = new google.maps.Map(document.querySelector("#map"), {
-        center: { lat: 22.6275598, lng: 120.3119502 },
-        zoom: 11,
-        styles: [
-            {
-                "featureType": "all",
-                "elementType": "labels.text",
-                "stylers": [
-                    {
-                        "gamma": "0.82"
-                    }
-                ]
-            },
-            {
-                "featureType": "landscape.natural",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "color": "#e0efef"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "color": "#e4dcd1"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.attraction",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.business",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.government",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.medical",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#aadca3"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.place_of_worship",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.school",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.sports_complex",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "lightness": 100
-                    },
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.line",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "lightness": 700
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "color": "#7dcdcd"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#0892d0"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "labels.text",
-                "stylers": [
-                    {
-                        "gamma": "8.63"
-                    }
-                ]
-            }
-        ]
-        
-    });
-}
-
-function findData(text) {
-    for (var i = 0; i < text.length; i++) {
-        var place = {};
-       
-        place.lat = parseFloat(text[i].Py);
-        place.lng = parseFloat(text[i].Px);
-
-
-        // 標記
-        // @ts-ignore
-        var marker = new google.maps.Marker({
-            map: map,
-            position: place,
-            title: text[i].Name
-        });
-
-        attachSecretMessage(marker, text[i]);
-
-        // addEventListener事件監聽
-        // addListener監聽 -->官方範例google map
-        function attachSecretMessage(marker, selectDataaa) {
-            // @ts-ignore
-            var infowindow = new google.maps.InfoWindow({
-                content: text[i].Name
-            });
-
-            marker.addListener('click', function () {
-                infowindow.open(marker.get('map'), marker);
-            });
-        }
-    }
-
-}
-
 
 
 // --------------------------------------- //
