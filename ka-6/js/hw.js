@@ -1,203 +1,3 @@
-// MAP
-var map;
-function initMap() {
-
-    // 設定地圖中心
-    // @ts-ignore
-    map = new google.maps.Map(document.querySelector("#map"), {
-        center: { lat: 22.6275598, lng: 120.3119502 },
-        zoom: 10,
-        styles: [
-            {
-                "featureType": "all",
-                "elementType": "labels.text",
-                "stylers": [
-                    {
-                        "gamma": "0.82"
-                    }
-                ]
-            },
-            {
-                "featureType": "landscape.natural",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "color": "#e0efef"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "color": "#e4dcd1"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "geometry.stroke",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.attraction",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.business",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.government",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.medical",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#aadca3"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.place_of_worship",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.school",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi.sports_complex",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "lightness": 100
-                    },
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit.line",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "lightness": 700
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "color": "#7dcdcd"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "color": "#0892d0"
-                    }
-                ]
-            },
-            {
-                "featureType": "water",
-                "elementType": "labels.text",
-                "stylers": [
-                    {
-                        "gamma": "8.63"
-                    }
-                ]
-            }
-        ]
-
-    });
-}
-
-// --------------------------------------- //
-
 // 透過AJAX勞資料
 var xhrdata;  //
 var xhr = new XMLHttpRequest();
@@ -216,10 +16,8 @@ xhr.onload = function () {
     } else {
         alert("資料錯誤!!");
     }
-    initMap();
+    
 }
-
-// --------------------------------------- //
 
 var nowPageAll = 1; //現在所在頁數
 var pageNumAll = 6; //每頁資料數上限
@@ -275,7 +73,6 @@ function pageContentAll(thisPageAll) {   //*2  //*6
 // --------------------------------------- //
 // 顯示頁數
 var pageAll = document.querySelector(".pageAll");
-
 function pageCountAll(totalPageAll, thisPageAll) { //兩頁 //*4 //*8
     console.log(totalPageAll);
     var page = "";
@@ -290,6 +87,7 @@ function pageCountAll(totalPageAll, thisPageAll) { //兩頁 //*4 //*8
     // @ts-ignore
     document.querySelector(".page").style.display = "none";
 }
+
 
 // --------------------------------------- //
 // 頁數按鈕監聽 
@@ -549,10 +347,208 @@ function pageClick(e) {
 
 // --------------------------------------- //
 
+// MAP
+var map;
+function initMap() {
+    
+    // 設定地圖中心
+    // @ts-ignore
+    map = new google.maps.Map(document.querySelector("#map"), {
+        center: { lat: 22.6275598, lng: 120.3119502 },
+        zoom: 11,
+        styles: [
+            {
+                "featureType": "all",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "gamma": "0.82"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape.natural",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "color": "#e0efef"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "color": "#e4dcd1"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.attraction",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.business",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.government",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.medical",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#aadca3"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.place_of_worship",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.school",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.sports_complex",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "lightness": 100
+                    },
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit.line",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "lightness": 700
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "color": "#7dcdcd"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#0892d0"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "gamma": "8.63"
+                    }
+                ]
+            }
+        ]
+        
+    });
+}
+
 function findData(text) {
     for (var i = 0; i < text.length; i++) {
         var place = {};
-
+       
         place.lat = parseFloat(text[i].Py);
         place.lng = parseFloat(text[i].Px);
 

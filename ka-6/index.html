@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高雄旅遊資訊</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/hw.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="info">
+
+                    <div class="info-titile">
+                        <a href="">高雄旅遊資訊</a>
+                    </div>
+
+                    <!-- 下拉選單ka -->
+                    <div class="info-select">
+                        <select name="ka" class="ka">
+                            <option selected="true" disabled selected value="- - 請選擇行政區 - -">- - 請選擇行政區 - -</option>
+                            <option value="苓雅區">苓雅區</option>
+                            <option value="三民區">三民區</option>
+                            <option value="新興區">新興區</option>
+                            <option value="鼓山區">鼓山區</option>
+                            <option value="內門區">內門區</option>
+                            <option value="美濃區">美濃區</option>
+                            <option value="大樹區">大樹區</option>
+                            <option value="小港區">小港區</option>
+                            <option value="六龜區">六龜區</option>
+                            <option value="仁武區">仁武區</option>
+                            <option value="左營區">左營區</option>
+                            <option value="田寮區">田寮區</option>
+                            <option value="永安區">永安區</option>
+                            <option value="杉林區">杉林區</option>
+                            <option value="那瑪夏">那瑪夏</option>
+                            <option value="岡山區">岡山區</option>
+                            <option value="高雄市">高雄市</option>
+                            <option value="前鎮區">前鎮區</option>
+                            <option value="茂林區">茂林區</option>
+                            <option value="茄萣區">茄萣區</option>
+                            <option value="梓官區">梓官區</option>
+                            <option value="旗津區">旗津區</option>
+                            <option value="桃源區">桃源區</option>
+                            <option value="楠梓區">楠梓區</option>
+                            <option value="前金區">前金區</option>
+                            <option value="鹽埕區">鹽埕區</option>
+                        </select>
+                    </div>
+
+                    <!-- 按鈕btn -->
+                    <div class="col-12 info-block">
+                        <div class="btnArea">
+                            <div class="info-hottitle">
+                                熱門行政區
+                            </div>
+                            <div class="info-btn">
+                                <input type="button" class="btn purple" value="苓雅區">
+                            </div>
+                            <div class="info-btn">
+                                <input type="button" class="btn pink" value="三民區">
+                            </div>
+                            <div class="info-btn">
+                                <input type="button" class="btn yellow" value="新興區">
+                            </div>
+                            <div class="info-btn">
+                                <input type="button" class="btn blue" value="鹽埕區">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="map"></div>
+
+                <!-- 呈現list -->
+                <div class="content">
+                    <hr>
+                    <div class="title">
+                        <!-- 標題 -->
+                    </div>
+                    <div class="list">
+                        <!-- 內容 -->
+                    </div>
+                    <!-- 若無資料 -->
+                    <div class="noInfo"></div>
+                    <!-- 頁數 -->
+                    <div class="pageAll">
+                        <button class="prevBtn">
+                            < prev </button> </button> <button class="nextBtn">
+                                next >
+                        </button>
+                    </div>
+                    <!-- 頁數 -->
+                    <div class="page">
+                        <button class="prevBtn">
+                            < prev </button> </button> <button class="nextBtn">
+                                next >
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="gototop">
+            <img src="./img/btn_goTop.png" alt="">
+        </div>
+        <div class="footer">
+            <div class="footer-ka">高雄旅遊網</div>
+            <div class="footer-kadata">資料來源：高雄市政府</div>
+        </div>
+    </section>
+
+
+    <div class="clearfix"></div>
+    <!-- google map -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjgycLlULderbqxuj7NInBviCIqZ1BD3A&callback=initMap">
+        </script>
+    <script src="./js/hw.js"></script>
+</body>
+
+</html>
