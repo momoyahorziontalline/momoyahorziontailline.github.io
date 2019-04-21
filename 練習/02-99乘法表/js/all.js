@@ -27,7 +27,7 @@ function calculation() {
         for (let j = 1; j < 10; j++) {
             let answer = i * j;
             let list = document.createElement("li");
-            list.textContent = `${i} × ${j} =${answer}`;
+            list.textContent = `${i} × ${j} = ${answer}`;
             chart.appendChild(list);
         }
     };

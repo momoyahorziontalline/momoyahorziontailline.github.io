@@ -26,28 +26,29 @@ body {
       content: "×";
       position: absolute;
       color: $color;
-      top: -10px;
+      top: -12px;
       font-size: 18px;
     }
     .line {
       background-color: $color;
-      width: 350px;
+      width: 300px;
       height: 2px;
       position: relative;
+      display: flex;
+      justify-content: center;
 
       &::before {
         @extend %all_line;
-        left: -20px;
+        left: -15px;
       }
       &::after {
         @extend %all_line;
-        right: -20px;
+        right: -15px;
       }
     }
 
     .title {
-      box-sizing: border-box;
-      width: 350px;
+      width: 280px;
       margin: 20px;
       .content {
         padding: 83px 0px;
@@ -67,7 +68,7 @@ body {
 
   // box>chart(ul)>chart_title(li)、list(li)
   .box {
-    width: 350px;
+    width: 305px;
     margin: 15px;
     box-shadow: 0px 1px 5px $shadow_color;
     border-top-left-radius: 100px;
@@ -82,7 +83,7 @@ body {
       align-content: space-around; //列
       justify-content: space-between; //撐滿
       .chart_title {
-        font-size: 128px;
+        font-size: 96px;
         font-weight: bold;
         text-shadow: 3px 0px 2px $shadow_color;
       }
@@ -90,19 +91,31 @@ body {
         color: $color;
         list-style: none;
         font-size: 24px;
-        padding: 1px;
+        padding: 5px;
       }
     }
   }
 
   // 頁尾
-  footer {
-    padding: 5px;
+  .footer {
+    padding: 10px;
     background: $color;
-    height: 50px;
     p {
       color: $white;
-      float: right;
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    #wrap {
+      .line {
+        width: 250px;
+      }
+    }
+    .footer p {
+      text-align: center;
     }
   }
 }
