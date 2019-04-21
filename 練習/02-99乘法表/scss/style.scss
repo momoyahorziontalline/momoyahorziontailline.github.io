@@ -1,0 +1,108 @@
+$color: #2eb738;
+$bg: #f0f0f0;
+$white: #fff;
+$shadow_color: grey;
+
+// 清除浮動
+.claerfix {
+  clear: both;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  #wrap {
+    background: $bg;
+    font-family: "微軟正黑體";
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    padding: 10px;
+    color: $color;
+    // 分隔線
+    %all_line {
+      content: "×";
+      position: absolute;
+      color: $color;
+      top: -10px;
+      font-size: 18px;
+    }
+    .line {
+      background-color: $color;
+      width: 350px;
+      height: 2px;
+      position: relative;
+
+      &::before {
+        @extend %all_line;
+        left: -20px;
+      }
+      &::after {
+        @extend %all_line;
+        right: -20px;
+      }
+    }
+
+    .title {
+      box-sizing: border-box;
+      width: 350px;
+      margin: 20px;
+      .content {
+        padding: 83px 0px;
+        text-align: center;
+        .main_title {
+          font-size: 56px;
+          color: $color;
+          font-weight: bold;
+        }
+        .subline {
+          font-size: 24px;
+          color: $color;
+        }
+      }
+    }
+  }
+
+  // box>chart(ul)>chart_title(li)、list(li)
+  .box {
+    width: 350px;
+    margin: 15px;
+    box-shadow: 0px 1px 5px $shadow_color;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 30px;
+    background: $white;
+    .chart {
+      display: flex;
+      padding: 35px 10px;
+      height: 280px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: space-around; //列
+      justify-content: space-between; //撐滿
+      .chart_title {
+        font-size: 128px;
+        font-weight: bold;
+        text-shadow: 3px 0px 2px $shadow_color;
+      }
+      li {
+        color: $color;
+        list-style: none;
+        font-size: 24px;
+        padding: 1px;
+      }
+    }
+  }
+
+  // 頁尾
+  footer {
+    padding: 5px;
+    background: $color;
+    height: 50px;
+    p {
+      color: $white;
+      float: right;
+    }
+  }
+}
