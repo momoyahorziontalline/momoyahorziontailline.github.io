@@ -21,37 +21,37 @@ body {
     flex-flow: wrap;
     padding: 10px;
     color: $color;
+    margin: 0 auto;
     // 分隔線
     %all_line {
       content: "×";
       position: absolute;
       color: $color;
-      top: -12px;
-      font-size: 18px;
+      top: -11px;
+      font-size: 16px;
     }
     .line {
       background-color: $color;
       width: 300px;
       height: 2px;
       position: relative;
-      display: flex;
-      justify-content: center;
+      margin: 0 auto;
 
       &::before {
         @extend %all_line;
-        left: -15px;
+        left: -12px;
       }
       &::after {
         @extend %all_line;
-        right: -15px;
+        right: -12px;
       }
     }
 
     .title {
       width: 280px;
-      margin: 20px;
+      // padding: 15px;
       .content {
-        padding: 83px 0px;
+        padding: 120px 0px;
         text-align: center;
         .main_title {
           font-size: 56px;
@@ -119,8 +119,11 @@ body {
   body {
     #wrap {
       .line {
-        width: 250px;
+        width: 280px;
       }
+    }
+    .box .chart li{
+      padding: 4px 2px;
     }
     .footer p {
       text-align: center;
