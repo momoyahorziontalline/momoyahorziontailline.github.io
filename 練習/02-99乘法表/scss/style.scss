@@ -8,125 +8,94 @@ $shadow_color: grey;
   clear: both;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  #wrap {
-    background: $bg;
-    font-family: "微軟正黑體";
-    display: flex;
-    justify-content: space-around;
-    flex-flow: wrap;
-    padding: 10px;
-    color: $color;
+#wrap {
+  font-family: "微軟正黑體";
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  flex-flow: wrap;
+  color: $color;
+  background: $bg;
+  margin: 0 auto;
+  // 分隔線
+  %all_line {
+    content: "×";
+    position: absolute;
+    top: -8px;
+    font-size: 18px;
+  }
+  .line {
+    background: $color;
+    width: 250px;
+    height: 2px;
+    position: relative;
     margin: 0 auto;
-    // 分隔線
-    %all_line {
-      content: "×";
-      position: absolute;
-      color: $color;
-      top: -11px;
-      font-size: 16px;
-    }
-    .line {
-      background-color: $color;
-      width: 300px;
-      height: 2px;
-      position: relative;
-      margin: 0 auto;
 
-      &::before {
-        @extend %all_line;
-        left: -12px;
-      }
-      &::after {
-        @extend %all_line;
-        right: -12px;
-      }
+    &:before {
+      @extend %all_line;
+      left: -20px;
     }
-
-    .title {
-      width: 280px;
-      // padding: 15px;
-      .content {
-        padding: 120px 0px;
-        text-align: center;
-        .main_title {
-          font-size: 56px;
-          color: $color;
-          font-weight: bold;
-        }
-        .subline {
-          font-size: 24px;
-          color: $color;
-        }
-      }
+    &:after {
+      @extend %all_line;
+      right: -20px;
     }
   }
 
-  // box>chart(ul)>chart_title(li)、list(li)
-  .box {
-    width: 305px;
-    margin: 15px;
-    box-shadow: 0px 1px 5px $shadow_color;
-    border-top-left-radius: 100px;
-    border-bottom-right-radius: 30px;
-    background: $white;
-    .chart {
-      display: flex;
-      padding: 35px 10px;
-      height: 280px;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-content: space-around; //列
-      justify-content: space-between; //撐滿
-      .chart_title {
-        font-size: 96px;
+  .title {
+    width: 320px;
+    padding: 20px;
+    .content {
+      padding: 120px 0px;
+      text-align: center;
+      .main_title {
+        font-size: 56px;
         font-weight: bold;
-        text-shadow: 3px 0px 2px $shadow_color;
-        text-align: center;
       }
-      li {
-        color: $color;
-        list-style: none;
+      .subline {
         font-size: 24px;
         padding: 5px;
+        color: $color;
       }
-    }
-  }
-
-  // 頁尾
-  .footer {
-    padding: 10px;
-    background: $color;
-    p {
-      color: $white;
-      text-align: right;
     }
   }
 }
 
-@media screen and (max-width: 520px) {
-  body {
-    .footer p {
+// box>chart(ul)>chart_title(li)、list(li)
+.box {
+  width: 320px;
+  margin: 15px;
+  box-shadow: 0px 1px 5px $shadow_color;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 30px;
+  background: $white;
+  .chart {
+    display: flex;
+    padding: 35px 10px;
+    height: 280px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around; //列
+    justify-content: space-between; //撐滿
+    .chart_title {
+      font-size: 120px;
+      font-weight: bold;
+      text-shadow: 3px 0px 2px $shadow_color;
       text-align: center;
+    }
+    li {
+      list-style: none;
+      font-size: 24px;
+      padding: 10px;
     }
   }
 }
-@media screen and (max-width: 320px) {
-  body {
-    #wrap {
-      .line {
-        width: 280px;
-      }
-    }
-    .box .chart li{
-      padding: 4px 2px;
-    }
-    .footer p {
-      text-align: center;
-    }
+
+// 頁尾
+.footer {
+  padding: 10px;
+  background: $color;
+  p {
+    color: $white;
+    text-align: right;
   }
 }
