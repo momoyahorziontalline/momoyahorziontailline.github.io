@@ -1,0 +1,85 @@
+.clearfix{
+  clear:both;
+}
+.wrap{
+  font-family:'微軟正黑體';
+  display:flex;
+  padding:10px;
+  background:#F0F0F0;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  color:#2EB738;
+}
+.line{
+  background-color:#2EB738;
+  width: 250px;
+  height: 2px;
+  position: relative;
+}
+.line:before{
+  content:"×";
+  position:absolute;
+  left:-20px;
+}  
+.line:after{
+  content:"×";
+  position: absolute;
+  right: -20px;
+}
+.line:before,.line:after{
+  color:#2EB738;
+  top:-8px;
+  font-size:18px;
+}
+
+.title{
+  box-sizing:border-box;
+  width: 320px;
+  margin:20px;
+}
+.title .content{
+  padding:120px 0px;
+  text-align:center;
+} 
+.title .content .main_title{
+  font-weight:bold;
+  font-size:56px;
+}
+.main_title,.subline{
+  font-size:24px;
+  padding:5px;
+  color:#2EB738;
+}
+.box{
+  width: 320px;
+  margin:15px;
+  box-shadow: 0px 1px 5px grey;
+  border-top-left-radius:100px;
+  border-bottom-right-radius:30px;
+}
+.box .chart{
+  display:flex;
+  padding:35px 10px;
+  height: 280px;
+  flex-wrap:wrap;
+  flex-direction:column;
+  align-content:space-around;
+  justify-content:space-between;
+}
+.box .chart li{
+  font-size:24px;
+  padding:9px;
+}
+.box .chart .chart_title{
+  font-size:120px;
+  font-weight:bold;
+  text-shadow: 3px 0px 2px grey;
+}
+.footer{
+  padding:10px;
+  background:#2EB738;
+}
+.footer h3{
+  color:white;
+  float:right;
+}
