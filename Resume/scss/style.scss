@@ -42,21 +42,22 @@ body{
   overflow-x: hidden;
 }
 
+
+@keyframes htmlwidth{
+  0% {width: 0;}
+  100% {width: 80%;}
+}
+@keyframes csswidth{
+  0% {width: 0;}
+  100% {width: 80%;}
+}
 @keyframes Illustratorwidth{
   0% {width: 0;}
-  100% {width: 65%;}
+  100% {width: 50%;}
 }
 @keyframes Photoshopwidth{
   0% {width: 0;}
   100% {width: 60%;}
-}
-@keyframes htmlwidth{
-  0% {width: 0;}
-  100% {width: 70%;}
-}
-@keyframes csswidth{
-  0% {width: 0;}
-  100% {width: 50%;}
 }
 @keyframes jswidth{
   0% {width: 0;}
@@ -64,7 +65,7 @@ body{
 }
 @keyframes jqwidth{
   0% {width: 0;}
-  100% {width: 30%;}
+  100% {width: 40%;}
 }
 
 
@@ -96,7 +97,7 @@ body{
       font-size: 1.5rem;
     }
   }
-  background-image: url("./notebook-1280538_1920.jpg");
+  background-image: url("../img/cup_bg.jpg");
   background-position: top center;
   background-size: cover;
   nav.navbar{
@@ -265,6 +266,7 @@ body{
     box-shadow: 0px 0px 10px #000;
     padding: 40px 10px;
     margin-top: 50px;
+    background: #fff;
     li:nth-child(1){
       i{
       color: $red;
@@ -294,9 +296,8 @@ body{
   .div-border{
     display: inline-block;
     border: 20px solid $grey;
-    float: right;
   }
-  a{
+  .pt-2 a{
     padding: 10px 25px;
     background: $orange;
     color: #fff;
@@ -379,12 +380,67 @@ body{
     .div-border{
       float: none;
     }
+   
   }
   li.pt-2{
     text-align: center;
   }
 }
 
+.border-color{
+  color:#001A40;
+} 
+
+.backtop {
+  width: 55px;
+  height: 55px;
+  background-color: #BDBDBD;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  padding-top: 10px;
+  position: fixed;
+  right: 15px;
+  bottom: 0px;
+  opacity: 0.8;
+  .fa-chevron-up {
+    color: #fff;
+    margin-left: 3px;
+  }
+}
+
+.sort{
+  width: 50%;
+  float: left;
+  padding: 5px;
+}
+
+.clearfix{
+  clear: both;
+}
+
+#header .container-fluid .card{
+  text-align: center;
+  display: block;
+}
+
+.card-img-top{
+  width: 50%;
+}
+
+@media(max-width: 1024px){
+  #header{
+    border: 0;
+  }
+
+  #contact{
+    .row{
+      margin: 0 auto;
+   } 
+   div.text-center{
+        max-width: 538px!important;
+     } 
+ }
+}
 @media(max-width: 767px){
   #header{
     ul.list-unstyled{
@@ -413,39 +469,13 @@ body{
   }
 }
 
-@media(max-width: 1024px){
-    #header{
-      border: 0;
-    }
 
-    #contact{
-      .row{
-        margin: 0 auto;
-     } 
-     div.text-center{
-          max-width: 538px!important;
-       } 
-   }
-}
 
-.border-color{
-  color:#001A40;
-} 
 
-.backtop {
-  width: 55px;
-  height: 55px;
-  background-color: #BDBDBD;
-  border-radius: 10px 10px 0 0;
-  text-align: center;
-  padding-top: 10px;
-  position: fixed;
-  right: 15px;
-  bottom: 0px;
-  opacity: 0.8;
-  .fa-chevron-up {
-    color: #fff;
-    margin-left: 3px;
+
+@media (min-width: 576px){
+  .col-sm-5 {
+    text-align: center;
   }
 }
 
