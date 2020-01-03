@@ -9,6 +9,16 @@ $('.nav-open').click(function () {
 });
 
 
+//收合
+// @ts-ignore
+$('nav ul li a').click(function () {
+    // @ts-ignore
+    $('.nav-open:visible').click();
+    // @ts-ignore
+    $(".nav-container").toggleClass('active');
+});
+
+
 //backtop
 // @ts-ignore
 $('.backtop').hide();
