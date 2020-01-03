@@ -1,2 +1,0 @@
-.clearfix{clear:both}body{background:#293b29;color:#fff}.clock{position:relative;width:350px;height:350px;margin:100px auto;background:url(../img/clock-bg.svg) no-repeat center}.clock img{display:block;position:absolute}.clock #second{z-index:3;top:48%;left:48%;-webkit-transform-origin:50% 2%;transform-origin:50% 2%}.clock #minute{z-index:2;top:23%;left:48.8%;-webkit-transform-origin:50% 95%;transform-origin:50% 95%}.clock #hour{z-index:1;top:48%;left:49%;-webkit-transform-origin:5% 50%;transform-origin:5% 50%}
-/*# sourceMappingURL=style.min.css.map */
