@@ -5,18 +5,7 @@
 // @ts-ignore
 $('.nav-open').click(function () {
     // @ts-ignore
-    $("nav").toggleClass();
-    // @ts-ignore
-    $("nav").fadeIn();
-});
-
-//收合
-// @ts-ignore
-$('nav ul li a').click(function () {
-    // @ts-ignore
-    $('.nav-open:visible').click();
-    // @ts-ignore
-    $(".nav").fadeOut();
+    $(".nav-container").toggleClass('active');
 });
 
 

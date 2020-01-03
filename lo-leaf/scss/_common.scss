@@ -19,6 +19,11 @@ body{
     margin-left: auto;
 }
 
+.container.con{
+    position: relative;
+    max-width: 1200px;
+}
+
 /* flex */
 .flex-container{
     display: flex;
