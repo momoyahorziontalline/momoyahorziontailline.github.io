@@ -15,7 +15,7 @@ $('nav ul li a').click(function () {
     // @ts-ignore
     $('.nav-open:visible').click();
     // @ts-ignore
-    $(".nav-container").toggleClass('active');
+    $(".nav-container").css("display","none");
 });
 
 
