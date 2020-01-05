@@ -43,6 +43,10 @@
                 line-height: 35px;
             }
         }
+        &.one{
+            display: flex;
+            order: 1;
+        }
     }
 }
 @media screen and (max-width:520px){
