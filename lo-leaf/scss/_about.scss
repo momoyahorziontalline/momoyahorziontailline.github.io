@@ -43,14 +43,14 @@
                 line-height: 35px;
             }
         }
-        &.one{
-            display: flex;
-            order: 1;
-        }
     }
 }
 @media screen and (max-width:520px){
     #about .flex-box .left{
         padding: 60px 8px;
+    }
+    #about .flex-box.one{
+        display: flex;
+        order: 1;
     }
 }
