@@ -1,0 +1,197 @@
+#article{
+    background: $article;
+    padding: 150px 0px;
+    // 標題
+    .title{
+      color:#2A3129;
+      text-align: center;
+      font-weight: 600;
+    }
+    .title-line {
+      width: 50px;
+      height: 2px;
+      float: left;
+      padding: 0px;
+      margin: 20px auto;
+      background-color: #161616;
+    }
+    .title-line.align-center{
+      width: 50px;
+      height: 2px;
+      float: none;
+      padding: 0px;
+      margin: 20px auto;
+    }
+    // 三個
+    .flex-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 100%;
+        .box{
+            width: 100%;
+            background: $white;
+            box-shadow: 0px 0px 35px rgba(0,0,0,0.3);
+            transition: 0.5s;
+            &:hover{
+                box-shadow: 5px 5px 60px rgba(0,0,0,0.4);
+                transform: translate(-5px,-5px);
+            }
+            .top1{
+                height: 250px;
+                position: relative;
+                transition: 0.5s;
+                background-image: url(../img/articles-01.jpg);
+                background-size: cover;
+                background-position: center;
+                .tag{
+                    width: 25px;
+                    height: 50px;
+                    background: $maincolor;
+                    float: right;
+                    margin-right: 20px;
+                }
+                .name{
+                    position: absolute;
+                    margin: 0;
+                    left: 0px;
+                    bottom: 0px;
+                    padding: 5px 15px;
+                    letter-spacing: 2px;
+                    color: $white;
+                    font-size: 24px;
+                    font-weight: 300;
+                    background: linear-gradient(transparent 0% , black 100%);
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding-top: 30px;
+                    padding-bottom: 15px;
+                    .smallText{
+                        font-size: 14px;
+                    }
+                }
+                .cirbutton{
+                    width: 50px;
+                    height: 50px;
+                    background: $maincolor;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 30px;
+                    bottom: -20px;
+                }
+            }
+            .top2{
+                height: 250px;
+                position: relative;
+                transition: 0.5s;
+                background-image: url(../img/articles-02.jpg);
+                background-size: cover;
+                background-position: center;
+                .tag{
+                    width: 25px;
+                    height: 50px;
+                    background: $maincolor;
+                    float: right;
+                    margin-right: 20px;
+                }
+                .name{
+                    position: absolute;
+                    margin: 0;
+                    left: 0px;
+                    bottom: 0px;
+                    padding: 5px 15px;
+                    letter-spacing: 2px;
+                    color: $white;
+                    font-size: 24px;
+                    font-weight: 300;
+                    background: linear-gradient(transparent 0% , black 100%);
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding-top: 30px;
+                    padding-bottom: 15px;
+                    .smallText{
+                        font-size: 14px;
+                    }
+                }
+                .cirbutton{
+                    width: 50px;
+                    height: 50px;
+                    background: $maincolor;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 30px;
+                    bottom: -20px;
+                }
+            }
+            .top3{
+                height: 250px;
+                position: relative;
+                transition: 0.5s;
+                background-image: url(../img/articles-03.jpg);
+                background-size: cover;
+                background-position: bottom;
+                .tag{
+                    width: 25px;
+                    height: 50px;
+                    background: $maincolor;
+                    float: right;
+                    margin-right: 20px;
+                }
+                .name{
+                    position: absolute;
+                    margin: 0;
+                    left: 0px;
+                    bottom: 0px;
+                    padding: 5px 15px;
+                    letter-spacing: 2px;
+                    color: $white;
+                    font-size: 24px;
+                    font-weight: 300;
+                    background: linear-gradient(transparent 0% , black 100%);
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding-top: 30px;
+                    padding-bottom: 15px;
+                    .smallText{
+                        font-size: 14px;
+                    }
+                }
+                .cirbutton{
+                    width: 50px;
+                    height: 50px;
+                    background: $maincolor;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 30px;
+                    bottom: -20px;
+                }
+            }
+            .bottom{
+                padding: 50px 60px;
+                li{
+                    padding: 5px 0px;
+                    text-align: center;
+                    letter-spacing: 2px;
+                } 
+                p{
+                    display: inline-block;
+                    margin: 0;
+                }
+                ul{
+                    list-style: none;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    #article{
+        padding: 50px 0;
+    }
+    #article .flex-box{
+        margin: 0px;
+        margin-bottom: 15px;
+    }
+}

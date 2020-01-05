@@ -1,0 +1,56 @@
+#about{
+    // 標題
+    .aaa{
+        padding: 0px;
+    }
+    .title{
+        color:#2A3129;
+        text-align: center;
+        font-weight: 600;
+    }
+    .title-line {
+        width: 50px;
+        height: 2px;
+        float: left;
+        padding: 0px;
+        margin: 20px auto;
+        background-color: #161616;
+    }
+    .title-line.align-center{
+        width: 50px;
+        height: 2px;
+        float: none;
+        padding: 0px;
+        margin: 20px auto;
+    }
+    .flex-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .right{
+            width: 100%;
+            background-image: url(../img/about-03-600-b.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+        }
+        .left{
+            background: $white;
+            padding: 150px 80px;
+            p{
+                letter-spacing: 0.5px;
+                line-height: 35px;
+            }
+        }
+    }
+}
+@media screen and (max-width:520px){
+    #about .flex-box .left{
+        padding: 60px 8px;
+    }
+    #about .flex-box.one{
+        display: flex;
+        order: 1;
+    }
+}
